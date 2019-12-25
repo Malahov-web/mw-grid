@@ -3,6 +3,7 @@ Powerfull and lightweight CSS layout framework for creating your layout like 'co
 
 # Example
 
+Your scss:
 ```scss
 
 // Options:
@@ -38,6 +39,8 @@ $devices: (
     )     
 );
 
+// Import module
+@import 'node_modules/mw-grid/_mwgrid.scss';
 ```
 
 # Installation
