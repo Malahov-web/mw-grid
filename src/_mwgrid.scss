@@ -7,7 +7,7 @@
 * 5. Collapse 
 * 6. Responsive utilites
 * 7. Text utulites
-*
+* 8. SCSS utulites (functions)
 */
 
 /* Options: */
@@ -302,3 +302,7 @@ $devices: map-merge(
     }
 
 }
+
+
+/* 8. SCSS Utulites (functions)  */
+@import 'utilites'; //

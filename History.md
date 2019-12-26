@@ -1,3 +1,19 @@
+1.2.0 / 2019-12-26
+==================
+
+ * Added SCSS Utulites (functions)
+ * Added 'Usage' in Readme.md
+
+1.1.2 / 2019-12-26
+==================
+
+  * Update Readme.md Example code
+
+1.1.1 / 2019-12-25
+==================
+
+  * Update
+
 1.1.0 / 2019-12-25
 ==================
 

@@ -1,0 +1,68 @@
+/*
+* 
+* 1. get_grid_bp() - return breakpoint value from $devices
+* 2. get_grid_c_m() - return container_max value from $devices
+* 3. get_grid_f_b() - return font_base value from $devices
+* 4. get_grid_ms_c() - return ms_coeff value from $devices
+*
+*/
+
+
+/* 1.  get_grid_c_m($bp_name) - return breakpoint value from $devices */
+
+// Get grid breakpoint value from $devices
+// @param  {String} $bp_name - breakpoint name
+// @return {Number} - breakpoint value (unitless)
+
+@function get_grid_bp($bp_name) {
+
+    $bp_obj: map-get($devices, $bp_name);
+    $bp_value: map-get($bp_obj, breakpoint);
+
+    @return $bp_value;  
+}
+
+
+/* 2. get_grid_c_m($bp_name) - return container_max value from $devices */
+
+// Get grid breakpoint value
+// @param $bp_name {String} $number - breakpoint name
+// @return {Number} - container_max value
+
+@function get_grid_c_m($bp_name) {
+
+    $bp_obj: map-get($devices, $bp_name);
+    $bp_value: map-get($bp_obj, container_max);
+
+    @return $bp_value;  
+}
+
+
+/* 3. get_grid_f_b($bp_name) - return font_base value from $devices */
+
+// Get grid breakpoint value
+// @param $bp_name {String} $number - breakpoint name
+// @return {Number} - font_base value
+
+@function get_grid_f_b($bp_name) {
+
+    $bp_obj: map-get($devices, $bp_name);
+    $bp_value: map-get($bp_obj, font_base);
+
+    @return $bp_value;  
+}
+
+
+/* 4. get_grid_ms_c($bp_name) - return ms_coeff value from $devices */
+
+// Get grid breakpoint value
+// @param $bp_name {String} $number - breakpoint name
+// @return {Number} - ms_coeff value (unitless)
+
+@function get_grid_ms_c($bp_name) {
+
+    $bp_obj: map-get($devices, $bp_name);
+    $bp_value: map-get($bp_obj, ms_coeff);
+
+    @return $bp_value;  
+}
