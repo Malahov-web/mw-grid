@@ -91,9 +91,19 @@ $devices: map-merge(
     box-sizing: border-box;    
     position: relative;
 }
+.container-elastic {
+    max-width: none;
+}
 
 
 /* 2. Modules display */
+
+/*
+Modules have:
+    vertical aligment ( .middle, etc.. )
+    reverse order ( .row-reverse )
+*/
+
 
 /* Block  model */
 @if map-get($modules_display, block) == 1 {
@@ -103,6 +113,8 @@ $devices: map-merge(
     }
 
     .row>div{ float : left; }
+
+    .row.row-reverse>div { float: right;  }
 }
 /* Inline-block  model */
 @if map-get($modules_display, inline-block) == 1 {
@@ -147,11 +159,19 @@ $devices: map-merge(
 
 /* 3. Columns v.2 */
 
+// column base styles
+%column_{
 
-
+    box-sizing: border-box; 
+    padding-left: $columns_gap+px;
+    padding-right: $columns_gap+px;
+    position : relative; 
+    min-height: 1px;
+}
 
 @each $device_name, $device_obj in $devices {
 
+    // columns width and offsets
     @media (min-width : #{map-get($device_obj, breakpoint)}px) {
 
         // between points : Container max-width
@@ -187,22 +207,13 @@ $devices: map-merge(
         }
 
     }
- 
+
+    // columns base styles
+    [class*="#{$device_name}"] {
+        @extend %column_;
+    }    
 }
 
-
-[class*="hd_"],
-[class*="ds_"],
-[class*="tb_"],
-[class*="mh_"],
-[class*="mv_"]
-{ 
-    box-sizing: border-box; 
-    padding-left: $columns_gap+px;
-    padding-right: $columns_gap+px;
-    position : relative; 
-    min-height: 1px;
-}
 
 
 /* 4. Auxiliary elements (Вспомогательные структурные элементы) */
@@ -224,31 +235,36 @@ $devices: map-merge(
 
 /* 5. Collapse */
 
+%padding_nulls {
+    padding-left: 0; padding-right: 0;  
+}
+
 .collapse {
     
     padding-left: 0; padding-right: 0;
     &>[class*=row]{
-        margin-left: 0; margin-right: 0;    
-        &>[class*="hd_"],
-        &>[class*="ds_"],
-        &>[class*="tb_"],
-        &>[class*="mh_"],
-        &>[class*="mv"] {
-            padding-left: 0; padding-right: 0;
+        margin-left: 0; margin-right: 0;
+
+        @each $device_name, $device_obj in $devices {
+            // columns padding nulls
+            [class*="#{$device_name}"] {
+                @extend  %padding_nulls;
+            }         
         }
     }
 }
 
 [class*=row].collapse {
 
-    margin-left: 0; margin-right: 0;    
-    &>[class*="hd_"],
-    &>[class*="ds_"],
-    &>[class*="tb_"],
-    &>[class*="mh_"],
-    &>[class*="mv_"] {
-        padding-left: 0; padding-right: 0;
+    margin-left: 0; margin-right: 0; 
+
+    @each $device_name, $device_obj in $devices {
+        // columns padding nulls
+        [class*="#{$device_name}"] {
+            @extend  %padding_nulls;
+        }         
     }
+
 }
 
 
@@ -257,10 +273,11 @@ $devices: map-merge(
 
 // v2
 
-/* Скрываем на больших, на малых показываем */
+/* Hide on large, show on small (Скрываем на больших, на малых показываем) */
 
 @each $device_name, $device_obj in $devices {
 
+    // Hide up (larger than this)
     $hidden_breakpoint: map-get($device_obj, breakpoint)+0px;
     @media  (min-width : $hidden_breakpoint ) {
         body .#{$device_name}hidden {
@@ -269,6 +286,7 @@ $devices: map-merge(
 
     }
 
+    // Show down (smaller than)
     $hidden_breakpoint: map-get($device_obj, breakpoint)-1px;
     @media  (max-width : $hidden_breakpoint ) {
 

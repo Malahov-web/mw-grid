@@ -1,3 +1,10 @@
+1.2.1 / 2020-02-28
+==================
+ * Fix Reverse in Block model
+ * Fixed Collapse (columns)
+ * Added container-elastic
+
+
 1.2.0 / 2019-12-26
 ==================
 
