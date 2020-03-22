@@ -1,0 +1,57 @@
+{
+  "name": "mw-grid",
+  "version": "1.2.1",
+  "description": "SCSS modular grid for your html/css project",
+  "keywords": "scss layout css grid flexbox",
+  "main": "index.js",
+  "devDependencies": {
+    "del": "^4.0.0",
+    "fs": "0.0.1-security",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-data": "^1.3.1",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-uglify": "^3.0.1",
+    "npm": "^6.13.4",
+    "async": "^2.6.2",
+    "browser-sync": "^2.26.3",
+    "glob": "^7.1.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-csslint": "^1.0.1",
+    "gulp-debug": "^4.0.0",
+    "gulp-iconfont": "^10.0.2",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-stylelint": "^8.0.0",
+    "gulp-svgmin": "^2.1.0",
+    "imagemin-pngquant": "^8.0.0",
+    "postcss": "^7.0.14",
+    "postcss-browser-reporter": "^0.5.0",
+    "postcss-reporter": "^6.0.1",
+    "postcss-scss": "^2.0.0",
+    "rename": "^1.0.4",
+    "stylelint": "^9.10.1",
+    "stylelint-config-recommended": "^2.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kirill Malakhov",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Malahov-web/mw-grid.git"
+  },
+  "dependencies": {
+    "bourbon": "^7.0.0"
+  }
+}

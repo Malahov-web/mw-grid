@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+{% set page_title = 'Category page' %}
+{% include "layout/_head.html" %}
+
+<body>
+
+
+{% import "components/menu/_menu-top.html" as menus %}
+{% import "components/menu/_menu-footer.html" as menu_footer %}
+
+
+<div id="my-page">
+
+
+    {% include "blocks/news/view/_news.html" %}
+
+
+    {% include "layout/_footer.html" %}
+
+</div>
+
+
+
+
+{% include "layout/_scripts.html" %}
+
+
+</body>
+</html>
