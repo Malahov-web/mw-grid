@@ -1,0 +1,60 @@
+{% extends "layout/_layout.html" %}
+
+
+{% set page_title = 'Columns' %}
+
+
+{% block main %}
+
+    <div class="section-columns">
+        <div class="row text">
+            <div class="mv_24">
+                <h1>Columns </h1>
+                <p>Columns in mw-grid has classes  like <code class="css-class">".mv_"</code> or <code class="css-class">[class*="ds_"]</code>. Default mw-grid has 5 breakpoints in SCSS object <code class="scss-var">$devices</code> and their keys are CSS-class prefixes:</p>
+                <ul>
+                    <li><code class="css-class">"mv_"</code> - for "mobile vertical" (like <code class="css-class">".mv_12"</code>) up from 320px</li>
+                    <li><code class="css-class">"mh_"</code> - for "mobile horizontal" (like <code class="css-class">".mh_12"</code>) up from 576px</li>
+                    <li><code class="css-class">"tb_"</code> - for "tablets" (like <code class="css-class">".tb_12"</code>) up from 768px</li>
+                    <li><code class="css-class">"mv_"</code> - for "desktops" (like <code class="css-class">".ds_12"</code>) up from 1024px</li>
+                    <li><code class="css-class">"hd_"</code> - for "hi definition" (like <code class="css-class">".hd_12"</code>) up from 1366px</li>
+ 
+                </ul>
+                <p>Columns number is set in SCSS var <code class="scss-var">$columns</code></p>
+                <p>Columns gaps (left and right) is set in SCSS var <code class="scss-var">$columns_gap</code></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section-columns-width" id="columns-width">
+        {% include "blocks/columns/view/_columns_width.html" %}
+    </div>
+
+    <div class="section-columns-offsets" id="offsets">
+        {% include "blocks/columns/view/_columns_offsets.html" %}
+    </div>
+
+    <div class="section-columns-nesting" id="nesting">
+        {% include "blocks/columns/view/_columns_nesting.html" %}
+    </div>  
+
+
+{% endblock %}
+
+
+
+{% block sidebar %}
+<aside class="sidebar">
+                   
+
+    <div class="menu-outer">
+        <div class="menu-side-outer">
+            
+            {{ menu_main.menu_main('', 'menu-side', mainmenu, 'Columns') }}
+
+        </div>
+    </div>
+
+
+</aside> 
+{% endblock %}

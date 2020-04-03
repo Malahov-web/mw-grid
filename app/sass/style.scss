@@ -29,7 +29,9 @@
 // @import 'hamburgers/hamburgers'; //
 
 // @import 'components';   // blocks and components
+@import 'plugins/highlighter';   // blocks and components
 
+// @debug "Fonts array: #{$fonts}";
 
 /* 0. General Vars, Mixins, Extends
  *
@@ -56,6 +58,10 @@
 .sidebar {
 // background: $grey;
     // @extend .section__block;
+
+    position: sticky; /* Липкое позиционирование */
+    top: 0; /* Положение сверху */
+
     @include h_rhytm('column', $fb);
     float: left;
     width: 100%;
@@ -162,13 +168,13 @@
 .menu-main{
 }
     .menu-main li{
-        display: inline-block;
+        // display: inline-block;
         
         &:last-child{
-            margin-right: 0;
+            // margin-right: 0;
         }
         a{
-            display: block;
+            // display: block;
 
             &:hover{
 
@@ -200,7 +206,7 @@
     padding-left: 2em;
     padding: 2em 0 2em 2em;
 }
-    .menu-side li{
+    .menu-side li {
         
         text-align: left;
 
@@ -217,6 +223,13 @@
 
             &:hover{
                 color: $secondary;
+            }
+        }
+
+        &.active {
+            & > a {
+                color: $secondary;
+                font-weight: 600;
             }
         }
 
@@ -251,3 +264,24 @@
 
 
 
+.section-columns-offsets {
+    .demo-rows {
+        .row {
+            margin-bottom: 1*$l_h_base;   
+            background-color: $grey_super_light;
+            .demo-block {
+                margin-bottom: -0px;
+            }
+        }        
+    }
+
+}
+
+/* Nesting */
+.demo-block {
+    .demo-block {
+        background-color: #fff;
+        background: linear-gradient(to right, #8D6329, #C69A5D);
+        
+    }
+}

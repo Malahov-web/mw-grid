@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Columns</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
+    <meta content='true' name='HandheldFriendly'>
+    <meta content='width' name='MobileOptimized'>
+    <meta content='yes' name='apple-mobile-web-app-capable'>
+    
+
+    <meta name="theme-color" content="#EF6C00"> 
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#EF6C00"> 
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#EF6C00"> 
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+    <!-- Яндекс.Браузер -->
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="css/normalize.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/mw_kit.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/responsive.css"> -->
+
+
+    <!-- highlight.js  -->
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/monokai-sublime.min.css">
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+<div id="my-page">
+
+    <header class="header">
+
+    <div class="header-top">
+        <div class="container container-elastic">
+
+            <div class="row-flex middle">
+
+                <div class="ds_12 header-left">
+                    <div class="logo">
+                        mw-grid
+                    </div>
+                    <div class="menu-top-outer">
+                        <ul class="menu-top">
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Examples</a></li>
+                            <li><a href="#">Themes</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="ds_12"></div>
+
+            </div>
+
+        </div>
+    </div>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header"  style="display: none;">
+
+    <div class="header-top">
+        <div class="container">
+
+            <div class="row-flex middle">
+
+                <div class="mv_12 tb_6 header-top-left">
+
+
+
+<!--                     <div class="header-top__tools tools">
+                        <div class="tools__item">
+                            <div class="tools__item-icon">
+                                <i class="material-icons">phone</i>
+                            </div>
+                            <div class="tools__item-title">Callback</div>                            
+                        </div>
+
+                        <div class="tools__item">
+                            <div class="tools__item-icon">
+                                <i class="material-icons">email</i>
+                            </div>
+                            <div class="tools__item-title">Write us</div>                            
+                        </div>
+
+                        <div class="tools__item">
+                            <div class="tools__item-icon">
+                                <i class="material-icons">account_circle</i>
+                            </div>
+                            <div class="tools__item-title">User/Account </div>                            
+                        </div>
+                    </div> -->
+
+                        <div class="menu-top-trigger tb_hidden js-mobile_menu__title js-trigger" data-target="menu-top" data-animation-effect="slide">
+                            <span><i class="material-icons">menu</i>menu</span>
+                        </div>                    
+                </div>
+
+                <div class="mv_12 tb_6">
+
+                    <div class="menu-top-outer js-mobile_menu-outer">
+
+
+
+                        <ul class="menu-top js-mobile_menu js-dropdown_list" style="display: none" data-animation-temp="">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Delivery</a></li>
+                            <li><a href="#">Payment</a></li>
+                            <li class="menu-item-has-children"><a href="#">Guarantee</a>
+                                <ul class="submenu-top">
+                                    <li><a href="#">О компании</a></li>
+                                    <li><a href="#">Доставка</a></li>
+                                    <li><a href="#">Оплата</a></li>
+                                    <li><a href="#">Гарантия</a></li>
+                                    <li><a href="#">Магазины</a></li>
+                                    <li><a href="#">Новости</a></li>
+                                </ul>                            
+                            </li>
+                            <li><a href="#">Shops</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>      
+    </div>
+
+    <div class="header-bottom">
+
+        <div class="container">
+            <div class="row-flex middle">
+
+                <div class="mv_4 tb_2 ds_3 logo-outer header__logo">
+                    <div class="logo">
+                        <a href="#"><img src="../images/logo.png" alt="Car Audio 2"></a>
+                    </div>
+                </div>
+
+                <div class="mv_12 tb_6 header-bottom-center">
+
+                    <div class="menu-main-trigger js-mobile_menu__title js-trigger" data-target="menu-main" data-animation-effect="slide">
+
+                    </div>
+
+                    <div class="search-outer header__search dark">
+
+
+
+                        <!-- <div class="search">
+                            <input class="search__field field-text" type="text" placeholder="Hint text">
+                            <a class="search__button button button-search">
+                                <i class="material-icons">search</i>
+                            </a>                    
+                        </div> -->
+
+                    </div>
+                </div>
+
+                <div class="mv_8 tb_4 ds_3 tools-outer">
+
+
+                    <!-- <div class="header-bottom__tools tools ">
+                        <div class="tools__item">
+                            <a href="#" class="tools__item-button"><i class="material-icons">favorite</i></a>
+                        </div>
+                        <div class="tools__item">
+                            <a href="#" class="tools__item-button"><i class="material-icons">equalizer</i></a>
+                        </div>
+                        <div class="tools__item">
+                            <a href="#" class="tools__item-button"><i class="material-icons">shopping_cart</i></a>
+                        </div>
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+    
+    
+    
+
+
+
+
+    <section class="section">
+        <div class="container container-elastic collapse">
+            
+
+            <main class="main main--sidebar--left">            
+                <!-- main  -->
+
+                
+
+    <div class="section-columns">
+        <div class="row text">
+            <div class="mv_24">
+                <h1>Columns </h1>
+                <p>Columns in mw-grid has classes  like <code class="css-class">".mv_"</code> or <code class="css-class">[class*="ds_"]</code>. Default mw-grid has 5 breakpoints in SCSS object <code class="scss-var">$devices</code> and their keys are CSS-class prefixes:</p>
+                <ul>
+                    <li><code class="css-class">"mv_"</code> - for "mobile vertical" (like <code class="css-class">".mv_12"</code>) up from 320px</li>
+                    <li><code class="css-class">"mh_"</code> - for "mobile horizontal" (like <code class="css-class">".mh_12"</code>) up from 576px</li>
+                    <li><code class="css-class">"tb_"</code> - for "tablets" (like <code class="css-class">".tb_12"</code>) up from 768px</li>
+                    <li><code class="css-class">"mv_"</code> - for "desktops" (like <code class="css-class">".ds_12"</code>) up from 1024px</li>
+                    <li><code class="css-class">"hd_"</code> - for "hi definition" (like <code class="css-class">".hd_12"</code>) up from 1366px</li>
+ 
+                </ul>
+                <p>Columns number is set in SCSS var <code class="scss-var">$columns</code></p>
+                <p>Columns gaps (left and right) is set in SCSS var <code class="scss-var">$columns_gap</code></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section-columns-width" id="columns-width">
+                <div class="row">
+            <div class="ds_24">
+                <h2>Columns width</h2>
+                <!-- <h2>Блочное отображение row</h2> -->
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="ds_24 mv_24">
+                <div class="demo-block"> ds_24
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="ds_12 mv_24">
+                <div class="demo-block"> ds_12
+                </div>
+            </div>
+            <div class="ds_12 mv_24">
+                <div class="demo-block"> ds_12
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="ds_6 tb_12 mv_24">
+                <div class="demo-block"> ds_6
+                </div>
+            </div>
+            <div class="ds_6 tb_12 mv_24">
+                <div class="demo-block"> ds_6
+                </div>
+            </div>
+            <div class="ds_6 tb_12 mv_24">
+                <div class="demo-block"> ds_6
+                </div>
+            </div>
+            <div class="ds_6 tb_12 mv_24">
+                <div class="demo-block"> ds_6
+                </div>
+            </div>
+        </div>  
+        <!-- ds_4 -->
+        <div class="row">
+            <div class="ds_4 tb_8 mh_12 mv_24">
+                <div class="demo-block"> ds_4
+                </div>
+            </div>
+            <div class="ds_4 tb_8 mh_12 mv_24">
+                <div class="demo-block"> ds_4
+                </div>
+            </div>
+            <div class="ds_4 tb_8 mh_12 mv_24">
+                <div class="demo-block"> ds_4
+                </div>
+            </div>
+            <div class="ds_4 tb_8 mh_12 mv_24">
+                <div class="demo-block"> ds_4
+                </div>
+            </div>
+            <div class="ds_4 tb_8 mh_12 mv_24">
+                <div class="demo-block"> ds_4
+                </div>
+            </div>
+            <div class="ds_4 tb_8 mh_12 mv_24">
+                <div class="demo-block"> ds_4
+                </div>
+            </div>
+        </div>
+        <!-- ds_3 -->
+        <div class="row">
+            <div class="ds_3 tb_4 mh_8 mv_12">
+                <div class="demo-block"> ds_3
+                </div>
+            </div>
+            <div class="ds_3 tb_4 mh_8 mv_12">
+                <div class="demo-block"> ds_3
+                </div>
+            </div>
+            <div class="ds_3 tb_4 mh_8 mv_12">
+                <div class="demo-block"> ds_3
+                </div>
+            </div>
+            <div class="ds_3 tb_4 mh_8 mv_12">
+                <div class="demo-block"> ds_3
+                </div>
+            </div>
+            <div class="ds_3 tb_4 mh_8 mv_12">
+                <div class="demo-block"> ds_3
+                </div>
+            </div>
+            <div class="ds_3 tb_4 mh_8 mv_12">
+                <div class="demo-block"> ds_3
+                </div>
+            </div>
+            <div class="ds_3 tb_4 mh_8 mv_12">
+                <div class="demo-block"> ds_3
+                </div>
+            </div>
+            <div class="ds_3 tb_4 mh_8 mv_12">
+                <div class="demo-block"> ds_3
+                </div>
+            </div>
+        </div>  
+        <!-- ds_2 -->
+        <div class="row">
+            <div class="ds_2 tb_3 mh_6 mv_12">
+                <div class="demo-block">ds_2
+                </div>
+            </div>
+            <div class="ds_2 tb_3 mh_6 mv_12">
+                <div class="demo-block">ds_2
+                </div>
+            </div>
+            <div class="ds_2 tb_3 mh_6 mv_12">
+                <div class="demo-block">ds_2
+                </div>
+            </div>
+            <div class="ds_2 tb_3 mh_6 mv_12">
+                <div class="demo-block">ds_2
+                </div>
+            </div>
+            <div class="ds_2 tb_3 mh_6 mv_12">
+                <div class="demo-block">ds_2
+                </div>
+            </div>
+            <div class="ds_2 tb_3 mh_6 mv_12">
+                <div class="demo-block">ds_2
+                </div>
+            </div>
+            <div class="ds_2 tb_3 mh_6 mv_12">
+                <div class="demo-block">ds_2
+                </div>
+            </div>
+            <div class="ds_2 tb_3 mh_6 mv_12">
+                <div class="demo-block">ds_2
+                </div>
+            </div>
+            <div class="ds_2 tb_3 mh_6 mv_12">
+                <div class="demo-block">ds_2
+                </div>
+            </div>
+            <div class="ds_2 tb_3 mh_6 mv_12">
+                <div class="demo-block">ds_2
+                </div>
+            </div>
+            <div class="ds_2 tb_3 mh_6 mv_12">
+                <div class="demo-block">ds_2
+                </div>
+            </div>
+            <div class="ds_2 tb_3 mh_6 mv_12">
+                <div class="demo-block">ds_2
+                </div>
+            </div>
+        </div>
+        <!-- ds_1 -->
+        <div class="row">
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+            <div class="ds_1 tb_2 mh_4 mv_8">
+                <div class="demo-block">ds_1
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section-columns-offsets" id="offsets">
+        <!-- <div class="row">
+    <div class="ds_24">
+        <h2>Columns offsets</h2>
+    </div>
+    
+</div> -->
+
+
+<!-- Doc  -->
+<div class="row text">
+
+    <div class="ds_24">
+        <!-- <h3>Columns offsets</h3> -->
+        <h2>Columns offsets</h2>
+        <p>Columns can has offsets (from left), and we have classes like <code class="css-class">".ds_offset_6"</code> to moving columns</p>
+
+        <ul>
+            <li>Offsets sizes are the same as columns sizes</li>
+            <li>Offsets is CSS-property <code class="css-property">margin-left</code></li>
+            <li>Offsets are responsive (<code class="css-class">".tb_offset_6.ds_offset_4"</code>) up to devices</li>
+            <li>Offsets can be reset (<code class="css-class">".tb_offset_2.ds_offset_0"</code>)</li>
+        </ul>
+
+    </div>
+
+</div>
+
+
+<!-- Demo -->
+<div class="demo-rows">
+    <div class="row">
+        <div class="mv_2 mv_offset_1">
+            <div class="demo-block">offset_1
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="mv_2 mv_offset_2">
+            <div class="demo-block">offset_2
+            </div>
+        </div>
+        <div class="mv_2 mv_offset_2">
+            <div class="demo-block">offset_2
+            </div>
+        </div>                
+    </div>
+    
+    <div class="row">
+        <div class="mv_3 mv_offset_3">
+            <div class="demo-block">offset_3
+            </div>
+        </div>
+        <div class="mv_3 mv_offset_0">
+            <div class="demo-block">offset_0
+            </div>
+        </div>
+        <div class="mv_3 mv_offset_3 ds_offset_0">
+            <div class="demo-block">ds_offset_0
+            </div>
+        </div>                    
+    </div>
+
+     <div class="row">
+        <div class="mv_12 mv_offset_12">
+            <div class="demo-block">offset_12
+            </div>
+        </div>
+    </div>
+
+     <div class="row">
+        <div class="mv_20 mv_offset_2">
+            <div class="demo-block">offset_2
+            </div>
+        </div>
+    </div>            
+
+</div>
+
+
+<!-- Code -->
+<div class="row">
+    <div class="mv_24">
+        <pre>
+            <code class="html-language">
+&lt;div class="row"&gt;
+    &lt;div class="mv_2 mv_offset_1"&gt;
+        &lt;div class="demo-block"&gt;offset_1
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+    &lt;div class="mv_2 mv_offset_2"&gt;
+        &lt;div class="demo-block"&gt;offset_2
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="mv_2 mv_offset_2"&gt;
+        &lt;div class="demo-block"&gt;offset_2
+        &lt;/div&gt;
+    &lt;/div&gt;                
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+    &lt;div class="mv_3 mv_offset_3"&gt;
+        &lt;div class="demo-block"&gt;offset_3
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="mv_3 mv_offset_0"&gt;
+        &lt;div class="demo-block"&gt;offset_0
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="mv_3 mv_offset_3 ds_offset_0"&gt;
+        &lt;div class="demo-block"&gt;ds_offset_0
+        &lt;/div&gt;
+    &lt;/div&gt;                    
+&lt;/div&gt;
+
+ &lt;div class="row"&gt;
+    &lt;div class="mv_12 mv_offset_12"&gt;
+        &lt;div class="demo-block"&gt;offset_12
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+ &lt;div class="row"&gt;
+    &lt;div class="mv_20 mv_offset_2"&gt;
+        &lt;div class="demo-block"&gt;offset_2
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+ 
+</div>
+
+
+
+    </div>
+
+    <div class="section-columns-nesting" id="nesting">
+        <!-- <div class="row">
+    <div class="ds_24">
+        <h2>Columns offsets</h2>
+    </div>
+    
+</div> -->
+
+
+<!-- Doc  -->
+<div class="row text">
+
+    <div class="ds_24">
+        <h2>Columns Nesting</h2>
+        <p>Columns can be nested. Always it's need <code class="css-class">".row"</code> wrapper </p>
+    </div>
+
+</div>
+
+
+<!-- Demo -->
+<div class="demo-rows">
+
+    <div class="row">
+        
+        <div class="mv_12">
+            <div class="demo-block">mv_12
+
+                <div class="row">
+                    <div class="mv_12">
+                        <div class="demo-block">
+                            <div class="mv_12">mv_12</div>
+                        </div>
+                    </div>
+                    <div class="mv_12">
+                        <div class="demo-block">
+                            <div class="mv_12">mv_12</div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>     
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+<!-- Code -->
+<div class="row">
+    <div class="mv_24">
+        <pre>
+            <code class="html-language">
+&lt;div class="row"&gt;
+    
+    &lt;div class="mv_12"&gt;
+        &lt;div class="demo-block"&gt;mv_12
+
+            &lt;div class="row"&gt;
+                &lt;div class="mv_12"&gt;
+                    &lt;div class="demo-block"&gt;
+                        &lt;div class="mv_12"&gt;mv_12&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mv_12"&gt;
+                    &lt;div class="demo-block"&gt;
+                        &lt;div class="mv_12"&gt;mv_12&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;                    
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;     
+&lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+ 
+</div>
+
+
+
+    </div>  
+
+
+                    
+
+
+            </main>
+
+
+
+
+            
+                           
+            
+
+
+            <aside class="sidebar">
+                               
+
+                <div class="menu-outer">
+                    <div class="menu-side-outer">
+                        
+                        
+
+
+<ul id="" class="menu-main  js-mobile_menu js-dropdown_list menu-side " data-js="menu-responsive" data-animation-temp="400">
+
+    
+
+    
+    
+
+        
+    
+
+    
+    
+
+    <li class="menu-main__item   ">
+        <a href="index.html" class="menu-main__item-link">Overview</a>
+
+        
+
+    </li>
+
+    
+    
+
+        
+    
+
+    
+    
+
+    <li class="menu-main__item   ">
+        <a href="structure-elements.html" class="menu-main__item-link">Structure elements</a>
+
+        
+
+    </li>
+
+    
+    
+        
+    
+
+        
+    
+        
+    
+
+    
+    
+
+    <li class="menu-main__item menu-item-has-children active ">
+        <a href="columns.html" class="menu-main__item-link">Columns</a>
+
+        
+            <!-- <i class="material-icons">keyboard_arrow_down</i> -->
+            <ul class="submenu">
+                
+                <li>
+                    <a href="#columns-width">Columns Width</a>
+                </li>
+                <li>
+                    <a href="#offsets">Offsets</a>
+                </li>
+                <li>
+                    <a href="#nesting">Nesting</a>
+                </li>
+            </ul>
+        
+
+    </li>
+
+
+
+</ul>
+
+
+
+
+                    </div>
+                </div>
+
+
+            </aside>             
+
+
+        </div>
+    </section>    
+
+
+
+
+
+    <section class="section">
+        <div class="container">
+        </div>
+        
+    </section>
+    
+
+
+    
+
+</div>
+
+
+
+<!-- JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script> -->
+
+<script>
+  let codeElements = document.querySelectorAll('pre > code');
+
+  // for (let elem of codeElements) {
+  //   // alert(elem.innerHTML); // "тест", "пройден"
+  //   elem.style.opacity = 0;
+  //   // elem.style.display = 0;
+  // }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+
+    // for (let elem of codeElements) {
+    //     elem.style.opacity = 1;
+    //     // elem.style.display = 0;
+    // }
+
+</script>
+
+<style>
+pre > code {
+    opacity: 1!important;
+}
+</style>style>
+
+<script src="js/min/scripts.min.js"> </script>
+
+</body>
+</html>
+
+

@@ -1,9 +1,13 @@
-# mw-grid
-Powerfull and lightweight CSS layout framework for creating your layout like 'container/row/column' support block, inline-block and flexbox models.
 
-## Example
 
-Your scss:
+  Powerfull and lightweight CSS layout framework for creating your layout
+  like 'container/row/column' support block, inline-block and flexbox models.
+
+
+  [![NPM Version][npm-image]][npm-url]
+  [![NPM Downloads][downloads-image]][downloads-url]
+
+
 ```scss
 
 // Options:
@@ -45,12 +49,15 @@ $devices: (
 
 ## Installation
 
-Clone the repo: 
-```bash
-git clone git@github.com:Malahov-web/mw-grid.git
-```
+This is a [Node.js](https://nodejs.org/en/) module available through the
+[npm registry](https://www.npmjs.com/).
 
-Install with [npm](https://nodejs.org/en/): 
+Before installing, [download and install Node.js](https://nodejs.org/en/download/).
+Node.js 0.10 or higher is required.
+
+Installation is done using the
+[`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
+
 ```bash
 $ npm install mw-grid --save-dev
 ```

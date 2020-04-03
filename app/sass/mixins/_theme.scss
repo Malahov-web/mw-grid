@@ -169,7 +169,7 @@ mixin font_size_pro()
     // font-size: modular-scale(3, 1em, $major-seventh);
     // font-size: modular-scale(3, 1em, 1.2);
 }
-    @debug "Fonts array: #{$fonts}";
+
 .my_head {
     // @include font_size_pro('small');
 

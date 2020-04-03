@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Overview</title>
+    <title>Structure elements</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
     <meta content='true' name='HandheldFriendly'>
@@ -231,82 +231,77 @@
 
                 
 
-    <div class="section-overview">
-        <div class="row text">
-            <div class="mv_24">
-                <h1>Overview </h1>
-                <p>Powerfull and lightweight CSS layout framework for creating your layout like 'container/row/column' support block, inline-block and flexbox models.</p>
 
+    <div class="section-structure-elements">
+        
+<div class="row text">
+    <div class="ds_24">
+        <h1>Structure Elements</h1>
 
-            </div>
-        </div>
+        <p>They are four main standart structure elements: <code class="css-class">".section"</code>, <code class="css-class">".container"</code>, <code class="css-class">".row"</code> and columuns like <code class="css-class">".mv_"</code> or <code class="css-class">[class*="ds_"]</code> </p>
+
     </div>
+    
+</div>
 
 
-    <div class="section-overview" id="overview">
-                        
+<!-- Code  -->
+<div class="row">
+    <div class="ds_24">
+        
+        <pre>
+<code class="html-language">
+&lt;section class="section"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="ds_24"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+</code>
+        </pre>
+    </div>
+</div>
+
 
 <!-- Doc  -->
 <div class="row text">
 
     <div class="ds_24">
-        <p>In your SCSS style add options and include mw-grid core, like this:</p>
+        <h2>Section</h2>
+        <p>
+            Section <code class="css-class">".section"</code> is global wrapper on page.
+        </p>
     </div>
+
+    <div class="ds_24">
+        <h2>Container</h2>
+        <p>
+            Container <code class="css-class">".container"</code> is wrap for rows of columns.
+        </p>
+        <ul>
+            <li><code class="css-class">".container"</code> centers your content on page <code class="css-property">margin-left: auto; margin-right: auto;</code></li>
+            <li>limits the width of the content. <code class="css-class">".container.container-elastic"</code> for no-limit</li>
+        </ul>
+    </div>  
+
+
+    <div class="ds_24">
+        <h2>Row</h2>
+        <p>
+            Row <code class="css-class">".row"</code> is wrap for columns
+        </p>
+        <ul>
+            <li>Set columns in a row</li>
+            <li>Also adjusts columns gap</li>
+            <li>Control display model: block, inline-block or flex</li>
+        </ul>
+
+    </div> 
+ 
 
 </div>
-
-          
-<!-- Code -->
-<div class="row">
-    <div class="mv_24">
-        <pre>
-            <code class="scss-language">
-// Options: 
-$columns: 24;
-$columns_gap: 10;
-$container_width: 1200;
-$breakpoints_between: 'responsive'; // 'responsive' || 'fixed' 
- 
-$modules_display: ( 
-    block: 1,
-    inline-block: 0,
-    flex: 1
-);
- 
-$devices: ( 
-    mv_: (
-        breakpoint: 320,
-        container_max: 300,
-        font_base: 15px,
-        ms_coeff: 1.10,
-    ),
-    tb_: (
-        breakpoint: 768,
-        container_max: 750,
-        font_base: 15px,
-        ms_coeff: 1.17,
-    ), 
-    ds_: (
-        breakpoint: 1024,
-        container_max: 960,
-        font_base: 16px,
-        ms_coeff: 1.17
-    )     
-);
-
-// Import module
-@import 'node_modules/mw-grid/src/_mwgrid.scss';
-            </code>
-        </pre>
     </div>
- 
-</div>
-
-
-
-
-    </div>
-
 
 
                     
@@ -340,13 +335,11 @@ $devices: (
 
         
     
-        
-    
 
     
     
 
-    <li class="menu-main__item  active ">
+    <li class="menu-main__item   ">
         <a href="index.html" class="menu-main__item-link">Overview</a>
 
         
@@ -358,11 +351,13 @@ $devices: (
 
         
     
+        
+    
 
     
     
 
-    <li class="menu-main__item   ">
+    <li class="menu-main__item  active ">
         <a href="structure-elements.html" class="menu-main__item-link">Structure elements</a>
 
         

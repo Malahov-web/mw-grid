@@ -144,64 +144,32 @@
 
     "mainmenu": [
         {
-            "menu-item-name": "Acoustic",
-            "menu-item-link": "#",
+            "item-name": "Overview",
+            "item-link": "index"
+
+        },
+        {
+            "item-name": "Structure elements",
+            "item-link": "structure-elements"
+        },
+        {
+            "item-name": "Columns",
+            "item-link": "columns",
             "submenu" : [
                 {
-                    "item-name" : "Frontal",
-                    "item-link": "#"
+                    "item-name" : "Columns Width",
+                    "item-link": "#columns-width"
                 },
                 {
-                    "item-name" : "Stereo",
-                    "item-link": "#"
+                    "item-name" : "Offsets",
+                    "item-link": "#offsets"
                 },
                 {
-                    "item-name" : "Back",
-                    "item-link": "#"
-                },
-                {
-                    "item-name" : "Sabwoofers",
-                    "item-link": "#"
-                },
-                {
-                    "item-name" : "5.1",
-                    "item-link": "#"
+                    "item-name" : "Nesting",
+                    "item-link": "#nesting"
                 }
             ]
-        },
-        {
-            "menu-item-name": "Amplifiers",
-            "menu-item-link": "#",
-            "menu-item-is-active": 1
-        },
-        {
-            "menu-item-name": "Stereos&Radios",
-            "menu-item-link": "#"
-        },
-        {
-            "menu-item-name": "Speakers",
-            "menu-item-link": "#"
-        },
-        {
-            "menu-item-name": "Sound Packages",
-            "menu-item-link": "#"
-        },
-        {
-            "menu-item-name": "Accessories",
-            "menu-item-link": "#"
-        },
-        {
-            "menu-item-name": "Processors",
-            "menu-item-link": "#"
-        },
-        {
-            "menu-item-name": "Computers",
-            "menu-item-link": "#"
-        },        
-        {
-            "menu-item-name": "GPS",
-            "menu-item-link": "#"
-        }
+        }       
 
     ],
 

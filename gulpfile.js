@@ -78,6 +78,8 @@ const pngquant = require('imagemin-pngquant');
 
 // paths
 const path_base = 'app/';
+// const path_dist = 'dist/';
+const path_dist = 'demo/';
 const path_libs = path_base + 'libs/';
 const path_view_styles = 'app/view/**/*.+(scss|scss)';
 const path_view_js     = 'app/view/**/*.+(js|js)';
@@ -102,21 +104,21 @@ let path = {
         html:    'assets/src/*.html',
         js:      'assets/src/js/main.js',
         style:   'assets/src/style/main.scss',
-        img:     'assets/src/img/**/*.*',
+        img:     'assets/src/images/**/*.*',
         fonts:   'assets/src/fonts/**/*.*'
     },
 
     build: {
-        html:    'dist/',
-        js:      'dist/js/min',
-        css:     'dist/css/',
-        img:     'dist/img/',
-        uploads: 'dist/uploads/',        
-        fonts:   'dist/fonts/'
+        html:    path_dist + '',
+        js:      path_dist + 'js/min',
+        css:     path_dist + 'css/',
+        img:     path_dist + 'images/',
+        uploads: path_dist + 'uploads/',        
+        fonts:   path_dist + 'fonts/'
     },
 
 
-    clean: './dist/*'
+    clean: './demo/*'
 };
 
 
@@ -127,11 +129,14 @@ const autoprefixerOptions = {
 // assets
 const fontName = 'ukresultflaticons';
 
-const js_jquery = path_libs + '/jquery/dist/jquery.min.js';
-const js_owl = path_libs + '/owl.carousel/dist/owl.carousel.min.js';
-const js_fancybox = path_libs + '/fancybox/dist/jquery.fancybox.min.js';
-const js_selectric = path_libs + '/jquery-selectric/public/jquery.selectric.min.js';   
-const js_maskedinput = path_libs + '/jquery.maskedinput/dist/jquery.maskedinput.min.js';   
+// const js_jquery = path_libs + '/jquery/dist/jquery.min.js';
+const js_jquery =  'node_modules/jquery/dist/jquery.min.js';
+// const js_highlight =  'node_modules/highlight.js/lib/highlight.js';
+
+// const js_owl = path_libs + '/owl.carousel/dist/owl.carousel.min.js';
+// const js_fancybox = path_libs + '/fancybox/dist/jquery.fancybox.min.js';
+// const js_selectric = path_libs + '/jquery-selectric/public/jquery.selectric.min.js';   
+// const js_maskedinput = path_libs + '/jquery.maskedinput/dist/jquery.maskedinput.min.js';   
 
 
 // 3. Tasks  
@@ -244,7 +249,8 @@ const js_maskedinput = path_libs + '/jquery.maskedinput/dist/jquery.maskedinput.
     gulp.task('js', function() {
       return  gulp.src(
         [
-            // js_jquery,
+            js_jquery,
+            // js_highlight,
             // js_owl,
             // js_fancybox,
             // js_selectric,
@@ -263,7 +269,8 @@ const js_maskedinput = path_libs + '/jquery.maskedinput/dist/jquery.maskedinput.
 
     gulp.task('clean', function() {
         // return del.sync('dist'); // - NOT work // Удаляем папку dist перед сборкой
-        return del('dist');         // + Work!  // Удаляем папку dist перед сборкой
+        // return del('demo');         // + Work!  // Удаляем папку dist перед сборкой
+        return del(path_dist);         // + Work!  // Удаляем папку dist перед сборкой
     });
 
     // 3.8.2  NunjucksRender - 
@@ -311,19 +318,16 @@ const js_maskedinput = path_libs + '/jquery.maskedinput/dist/jquery.maskedinput.
 
 // 4. Calls
 
-// gulp.task('watch', ['bs-serve', 'scss', 'nunjucksRender'], function() {
 gulp.task('watch',  function() {
     // gulp.watch('app/sass/**/*.+(scss|scss)', [ 'scss']);     
-    gulp.watch('app/sass/**/*.+(scss|scss)', gulp.parallel('scss'));  
+    // gulp.watch('app/sass/**/*.+(scss|scss)', gulp.parallel('scss'));  
+    gulp.watch(['app/sass/**/*.+(scss|scss)', path_view_styles], gulp.parallel('scss')); 
     gulp.watch(['app/view/**/*.html', 'app/data/**/*.json'], gulp.parallel('nunjucksRender'));        
     gulp.watch(['app/js/*.js', path_view_js], gulp.parallel('js'));     
 });
 
-// gulp.task('watchjs', gulp.parallel('bs-serve', 'js'), function() {
 
-//     gulp.watch('app/js/*.js', gulp.parallel('js'));
-//     gulp.watch(['app/view/**/*.html', 'app/data/**/*.json'], gulp.parallel('nunjucksRender'));
-// }); 
+
 gulp.task('watchjs', function() {
 
     gulp.watch('app/js/*.js', gulp.parallel('js'));
@@ -418,7 +422,7 @@ gulp.task('build3', gulp.series('clean'),  function () {
                 use: [pngquant()]
             }))
             // .pipe(gulp.dest('dist/images'))
-            .pipe(gulp.dest(path.build.images))
+            .pipe(gulp.dest(path.build.img))
     }); 
     gulp.task('uploads:prod', function () {
         return gulp.src('app/uploads/**/*')

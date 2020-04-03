@@ -1,4 +1,32 @@
 <!-- JS -->
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script> -->
 
-    <script src="js/min/scripts.min.js"> </script>
+<script>
+  let codeElements = document.querySelectorAll('pre > code');
+
+  // for (let elem of codeElements) {
+  //   // alert(elem.innerHTML); // "тест", "пройден"
+  //   elem.style.opacity = 0;
+  //   // elem.style.display = 0;
+  // }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+
+    // for (let elem of codeElements) {
+    //     elem.style.opacity = 1;
+    //     // elem.style.display = 0;
+    // }
+
+</script>
+
+<style>
+pre > code {
+    opacity: 1!important;
+}
+</style>style>
+
+<script src="js/min/scripts.min.js"> </script>

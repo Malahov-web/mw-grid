@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+{% include "layout/_head.html" %}
+
+<body>
+
+
+{% import "components/menu/_menu-top.html" as menu_top %}
+{% import "components/menu/_menu-main.html" as menu_main %}
+{% import "components/menu/_menu-footer.html" as menu_footer %}
+
+
+
+<div id="my-page">
+
+    {% include "layout/_header.html" %}
+
+    {# header including variant #}
+    {% block header %}
+    {% endblock %}
+
+
+
+
+    <section class="section">
+        <div class="container container-elastic collapse">
+            
+
+            <main class="main main--sidebar--left">            
+                <!-- main  -->
+
+                {% block main %}
+                    This is the default content
+                {% endblock %}                    
+
+
+            </main>
+
+
+
+
+            {# sidebar including variant #}
+            {#% block sidebar %#}               
+            {#% endblock %#}
+
+
+            <aside class="sidebar">
+                               
+
+                <div class="menu-outer">
+                    <div class="menu-side-outer">
+                        
+                        {{ menu_main.menu_main('', 'menu-side', mainmenu, page_title) }}
+
+                    </div>
+                </div>
+
+
+            </aside>             
+
+
+        </div>
+    </section>    
+
+
+
+
+
+    <section class="section">
+        <div class="container">
+        </div>
+        
+    </section>
+    
+
+
+    {#% include "layout/_footer.html" %#}
+
+</div>
+
+
+
+{% include "layout/_scripts.html" %}
+
+</body>
+</html>
+
+{#
+                        <!--ul class="menu-side">
+                            <li><a href="#">Overview</a></li>
+                            <li><a href="#">Structure elements</a></li>
+                            <li><a href="#">Modules display</a>
+                                <ul class="submenu">
+                                    <li><a href="#">Block</a></li>
+                                    <li><a href="#">Inline-block</a></li>
+                                    <li><a href="#">Flex</a></li>
+                                </ul>                                
+                            </li>
+                            <li><a href="#">Columns</a>
+                                <ul class="submenu">
+                                    <li><a href="#">Columns Width</a></li>
+                                    <li><a href="#">Offsets</a></li>
+                                    <li><a href="#">Nesting</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Features</a>
+                                <ul class="submenu">
+                                    <li><a href="#">Horizontal Aligment</a></li>
+                                    <li><a href="#">Vertical Aligment</a></li>
+                                    <li><a href="#">Ordering (Reverse)</a></li>
+                                    <li><a href="#">Columns Same Height</a></li>
+                                    <li><a href="#"></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#">Auxiliary elements</a></li>
+                            <li><a href="#">Collapse</a></li>
+                            <li><a href="#">Responsive utilites</a></li>
+                            <li><a href="#">Text utulites</a></li>
+                            <li><a href="#">SCSS utulites (functions)</a></li>
+                        </ul-->
+
+#}
