@@ -1,0 +1,53 @@
+{% extends "layout/_layout.html" %}
+
+
+{% set page_title = 'Collapse' %}
+
+
+{% block main %}
+
+    <div class="section-collapse">
+        <div class="row text">
+            <div class="mv_24">
+                <h1>Collapse </h1>
+                <p>Columns can be collapse. Add class <code class="css-class">".collapse"</code> to row, container, or single column. It removes columns gaps.</p>
+
+                <ul>
+                    <li>Row collapse - collapse all columns in a row, and nested rows</li>
+                    <li>Row collapse this - collapse columns in this row only <code class="css-class">".collapse-this"</code></li>
+                    <li>Container collapse - collapse container and columns in his child row only</li>
+                    <li>Columns Row - collapse only this column</li>
+                </ul>
+
+                <!-- <p>Columns number is set in SCSS var <code class="scss-var">$columns</code></p> -->
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section-collapse" id="columns-collapse">
+        {% include "blocks/collapse/view/_collapse.html" %}
+    </div>
+
+
+
+{% endblock %}
+
+
+
+{% block sidebar %}
+<aside class="sidebar">
+                   
+
+    <div class="menu-outer">
+        <div class="menu-side-outer">
+            
+            {{ menu_main.menu_main('', 'menu-side', mainmenu, 'Columns') }}
+
+        </div>
+    </div>
+
+
+</aside> 
+{% endblock %}

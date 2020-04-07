@@ -274,12 +274,13 @@ Modules have:
 .collapse {
     
     padding-left: 0; padding-right: 0;
-    &>[class*=row]{
+    & > [class*=row]{
+    // & [class*=row]{
         margin-left: 0; margin-right: 0;
 
         @each $device_name, $device_obj in $devices {
             // columns padding nulls
-            [class*="#{$device_name}"] {
+            & > [class*="#{$device_name}"] {
                 @extend  %padding_nulls;
             }         
         }
@@ -289,10 +290,26 @@ Modules have:
 [class*=row].collapse {
 
     margin-left: 0; margin-right: 0; 
+    [class*=row] {
+        margin-left: 0; margin-right: 0; 
+    }
 
     @each $device_name, $device_obj in $devices {
         // columns padding nulls
         [class*="#{$device_name}"] {
+            @extend  %padding_nulls;
+        }         
+    }
+
+}
+
+[class*=row].collapse-this {
+
+    margin-left: 0; margin-right: 0; 
+
+    @each $device_name, $device_obj in $devices {
+        // columns padding nulls
+        & > [class*="#{$device_name}"] {
             @extend  %padding_nulls;
         }         
     }

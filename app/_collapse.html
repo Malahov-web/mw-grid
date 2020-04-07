@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 
-
 <head>
-    <title>Index</title>
+    <title>Collapse</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
     <meta content='true' name='HandheldFriendly'>
@@ -35,6 +34,8 @@
 </head>
 
 <body>
+
+
 
 
 
@@ -214,21 +215,44 @@
 
 </header>
 
+    
+    
+    
+
+
 
 
     <section class="section">
         <div class="container container-elastic collapse">
             
 
-            <main class="main main--sidebar--left">
-                main
+            <main class="main main--sidebar--left">            
+                <!-- main  -->
 
-                <!--div class="section-structure-elements">
-                    
-                </div-->
+                
 
-                <div class="section-columns-width" id="columns_width">
-                            <div class="row">
+    <div class="section-columns">
+        <div class="row text">
+            <div class="mv_24">
+                <h1>Collapse </h1>
+                <p>Columns can be collapse. Add class <code class="css-class">".collapse"</code> to row, container, or single column. It removes columns gap</p>
+
+                <ul>
+                    <li>Row collapse - collapse all columns in a row, and nested rows</li>
+                    <li>Container collapse - collapse all columns in all rows in container</li>
+                    <li>Columns Row - collapse only this column</li>
+                </ul>
+
+
+                <!-- <p>Columns number is set in SCSS var <code class="scss-var">$columns</code></p> -->
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section-columns-width" id="columns-width">
+                <div class="row">
             <div class="ds_24">
                 <h2>Columns width</h2>
                 <!-- <h2>Блочное отображение row</h2> -->
@@ -485,10 +509,10 @@
             </div>
         </div>
 
-                </div>
+    </div>
 
-                <div class="section-columns-offsets" id="columns_offsets">
-                    <!-- <div class="row">
+    <div class="section-columns-offsets" id="offsets">
+        <!-- <div class="row">
     <div class="ds_24">
         <h2>Columns offsets</h2>
     </div>
@@ -627,10 +651,10 @@
 
 
 
-                </div>
+    </div>
 
-                <div class="section-columns-nesting" id="columns_nesting">
-                    <!-- <div class="row">
+    <div class="section-columns-nesting" id="nesting">
+        <!-- <div class="row">
     <div class="ds_24">
         <h2>Columns offsets</h2>
     </div>
@@ -716,8 +740,10 @@
 
 
 
-                </div>                
+    </div>  
 
+
+                    
 
 
             </main>
@@ -725,52 +751,250 @@
 
 
 
+            
+                           
+            
+
 
             <aside class="sidebar">
-                sidebar
-
-                
+                               
 
                 <div class="menu-outer">
                     <div class="menu-side-outer">
-                        <ul class="menu-side">
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="#">Structure elements</a></li>
-                            <li><a href="#">Modules display</a>
-                                <ul class="submenu">
-                                    <li><a href="#">Block</a></li>
-                                    <li><a href="#">Inline-block</a></li>
-                                    <li><a href="#">Flex</a></li>
-                                </ul>                                
-                            </li>
-                            <li><a href="#">Columns</a>
-                                <ul class="submenu">
-                                    <li><a href="#">Columns Width</a></li>
-                                    <li><a href="#">Offsets</a></li>
-                                    <li><a href="#">Nesting</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Features</a>
-                                <ul class="submenu">
-                                    <li><a href="#">Horizontal Aligment</a></li>
-                                    <li><a href="#">Vertical Aligment</a></li>
-                                    <li><a href="#">Ordering (Reverse)</a></li>
-                                    <li><a href="#">Columns Same Height</a></li>
-                                    <li><a href="#"></a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#">Auxiliary elements</a></li>
-                            <li><a href="#">Collapse</a></li>
-                            <li><a href="#">Responsive utilites</a></li>
-                            <li><a href="#">Text utulites</a></li>
-                            <li><a href="#">SCSS utulites (functions)</a></li>
-                        </ul>
+
+                        
+
+
+<ul id="" class="menu-main  js-mobile_menu js-dropdown_list menu-side " data-js="menu-responsive" data-animation-temp="400">
+
+    
+
+    
+    
+
+        
+    
+
+    
+    
+
+    <li class="menu-main__item   ">
+        <a href="overview.html" class="menu-main__item-link">Overview</a>
+
+        
+
+    </li>
+
+    
+    
+
+        
+    
+
+    
+    
+
+    <li class="menu-main__item   ">
+        <a href="structure-elements.html" class="menu-main__item-link">Structure elements</a>
+
+        
+
+    </li>
+
+    
+    
+        
+    
+
+        
+    
+
+    
+    
+
+    <li class="menu-main__item menu-item-has-children  ">
+        <a href="modules-display.html" class="menu-main__item-link">Modules display</a>
+
+        
+            <!-- <i class="material-icons">keyboard_arrow_down</i> -->
+            <ul class="submenu">
+                
+                <li>
+                    <a href="#block">Block</a>
+                </li>
+                <li>
+                    <a href="#inline-block">Inline-block</a>
+                </li>
+                <li>
+                    <a href="#flex">Flex</a>
+                </li>
+            </ul>
+        
+
+    </li>
+
+    
+    
+        
+    
+
+        
+    
+
+    
+    
+
+    <li class="menu-main__item menu-item-has-children  ">
+        <a href="columns.html" class="menu-main__item-link">Columns</a>
+
+        
+            <!-- <i class="material-icons">keyboard_arrow_down</i> -->
+            <ul class="submenu">
+                
+                <li>
+                    <a href="#columns-width">Columns Width</a>
+                </li>
+                <li>
+                    <a href="#offsets">Offsets</a>
+                </li>
+                <li>
+                    <a href="#nesting">Nesting</a>
+                </li>
+            </ul>
+        
+
+    </li>
+
+    
+    
+        
+    
+
+        
+    
+
+    
+    
+
+    <li class="menu-main__item menu-item-has-children  ">
+        <a href="features.html" class="menu-main__item-link">Features</a>
+
+        
+            <!-- <i class="material-icons">keyboard_arrow_down</i> -->
+            <ul class="submenu">
+                
+                <li>
+                    <a href="horizontal-aligment">Horizontal Aligment</a>
+                </li>
+                <li>
+                    <a href="vertical-aligment">Vertical Aligment</a>
+                </li>
+                <li>
+                    <a href="ordering-reverse">Ordering (Reverse)</a>
+                </li>
+                <li>
+                    <a href="columns-same-height">Columns Same Height</a>
+                </li>
+            </ul>
+        
+
+    </li>
+
+    
+    
+
+        
+    
+
+    
+    
+
+    <li class="menu-main__item   ">
+        <a href="auxiliary-elements.html" class="menu-main__item-link">Auxiliary elements</a>
+
+        
+
+    </li>
+
+    
+    
+
+        
+    
+        
+    
+
+    
+    
+
+    <li class="menu-main__item  active ">
+        <a href="collapse.html" class="menu-main__item-link">Collapse</a>
+
+        
+
+    </li>
+
+    
+    
+
+        
+    
+
+    
+    
+
+    <li class="menu-main__item   ">
+        <a href="responsive-utilites.html" class="menu-main__item-link">Responsive utilites</a>
+
+        
+
+    </li>
+
+    
+    
+
+        
+    
+
+    
+    
+
+    <li class="menu-main__item   ">
+        <a href="text-utulites.html" class="menu-main__item-link">Text utulites</a>
+
+        
+
+    </li>
+
+    
+    
+
+        
+    
+
+    
+    
+
+    <li class="menu-main__item   ">
+        <a href="scss-utulites-functions.html" class="menu-main__item-link">SCSS utulites (functions)</a>
+
+        
+
+    </li>
+
+
+
+</ul>
+
+
+
+
                     </div>
                 </div>
 
 
-            </aside>
+            </aside>             
+
 
         </div>
     </section>    
@@ -793,7 +1017,6 @@
 
 
 
-<script>hljs.initHighlightingOnLoad();</script>
 <!-- JS -->
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script> -->
 
@@ -823,10 +1046,11 @@
 pre > code {
     opacity: 1!important;
 }
-</style>
+</style>style>
 
 <script src="js/min/scripts.min.js"> </script>
 
-
 </body>
 </html>
+
+
