@@ -176,7 +176,7 @@
     "mainmenu": [
         {
             "item-name": "Overview",
-            "item-link": "overview"
+            "item-link": "index"
 
         },
         {
@@ -220,49 +220,41 @@
             ]
         },
         {
+            "item-name": "Collapse",
+            "item-link": "collapse"
+        },        
+        {
             "item-name": "Features",
             "item-link": "features",
             "submenu" : [
                 {
                     "item-name" : "Horizontal Aligment",
-                    "item-link": "horizontal-aligment"
+                    "item-link": "#horizontal-aligment"
                 },
                 {
                     "item-name" : "Vertical Aligment",
-                    "item-link": "vertical-aligment"
+                    "item-link": "#vertical-aligment"
                 },
                 {
                     "item-name" : "Ordering (Reverse)",
-                    "item-link": "ordering-reverse"
+                    "item-link": "#ordering-reverse"
                 },
                 {
                     "item-name" : "Columns Same Height",
-                    "item-link": "columns-same-height"
+                    "item-link": "#columns-same-height"
                 }
 
             ]            
         },
-        {
-            "item-name": "Auxiliary elements",
-            "item-link": "auxiliary-elements"
-        },
-        {
-            "item-name": "Collapse",
-            "item-link": "collapse"
-        },
+
         {
             "item-name": "Responsive utilites",
             "item-link": "responsive-utilites"
         },        
         {
-            "item-name": "Text utulites",
-            "item-link": "text-utulites"
-        },
-        {
-            "item-name": "SCSS utulites (functions)",
-            "item-link": "scss-utulites-functions"
-        }        
-
+            "item-name": "Text utilites",
+            "item-link": "text-utilites"
+        }
     ],    
 
     "topmenu": [

@@ -1,3 +1,7 @@
+1.3.1 / 2020-04-10
+==================
+ * Added Demo: collapse, display-models
+
 1.3.0 / 2020-04-04
 ==================
  * Added Demo: /demo/index.html, /demo/columns.html, /demo/structure-elements.html, 

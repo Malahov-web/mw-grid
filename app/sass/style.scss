@@ -285,3 +285,28 @@
         
     }
 }
+
+/* Display-models */
+[class*=section-display] {
+    margin-bottom: 1*$l_h_base;  
+}
+.section-display-models-inline-block .row-line {
+    padding-bottom: 1*$l_h_base;
+    & > div {
+        .demo-block {
+            margin-bottom: 0;
+        }
+    }
+}
+.section-display-models-flex .row-flex {
+    // padding-bottom: 1*$l_h_base;
+    padding-bottom: 1*$l_h_base;
+    & > div {
+        // background: linear-gradient(to right, #8D6329, #C69A5D);
+        .demo-block {
+            margin-bottom: 0;
+            position: relative;
+            height: 100%;
+        }
+    }
+}

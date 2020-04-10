@@ -5,12 +5,13 @@ $columns_gap: 10;
 $container_width: 1200;
 $breakpoints_between: 'responsive'; // 'responsive' || 'fixed' 
  
-$modules_display: ( 
+
+$display_models: ( 
     block: 1,
-    inline-block: 0,
+    inline-block: 1,
     flex: 1
-);
- 
+); 
+
 $devices: ( 
     mv_: (
         breakpoint: 320,

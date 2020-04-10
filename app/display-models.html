@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Overview</title>
+    <title>Display models</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
     <meta content='true' name='HandheldFriendly'>
@@ -231,71 +231,138 @@
 
                 
 
-    <div class="section-overview">
+    <div class="section-display-models">
         <div class="row text">
             <div class="mv_24">
-                <h1>Overview </h1>
-                <p>Powerfull and lightweight CSS layout framework for creating your layout like 'container/row/column' support block, inline-block and flexbox models.</p>
+                <h1>Display models</h1>
 
+                <p>Mw-rid has 3 display models:  "block", "inline-block" and "flexbox".
+                    And they are CSS-classes for row wrap: <code class="css-class">".row"</code>, <code class="css-class">".row-line"</code> and <code class="css-class">".row-flex"</code></p>
 
+                <ul>
+                    <li>3 models flexbox, block and inline-block</li>
+                    <li>Set models in SCSS options (<code class="scss-var">$display_models</code>)</li>
+                    <li>Drive models with 3 CSS-classes is deadly simple</li>
+                </ul>
+
+                <p>Display models is set in SCSS obj <code class="scss-var">$display_models</code></p>
+
+                <table>
+                    <tr>
+                        <th></th> <th>Block</th><th>Inline-Block</th><th>Flex</th>
+                    </tr>
+                    <tr>
+                        <td>Display</td>
+                        <td><code class="css-property">block</code></td>
+                        <td><code class="css-property">inline-block</code></td>
+                        <td><code class="css-property">flex</code></td>
+                    </tr>
+                    <tr>
+                        <td>CSS-class</td>
+                        <td><code class="css-class">".row"</code></td>
+                        <td><code class="css-class">".row-line"</code></td>
+                        <td><code class="css-class">".row-flex"</code></td>
+                    </tr>                    
+                    <tr>
+                        <td>Reverse</td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                    </tr>
+                    <tr>
+                        <td>Horizontal aligment</td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                    </tr>
+                    <tr>
+                        <td>Vertical aligment</td>
+                        <td></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                    </tr>
+                    <tr>
+                        <td>Columns Same Height</td>
+                        <td></td>
+                        <td></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                    </tr>
+
+                    <tr>
+                        <td>Specific order</td>
+                        <td></td>
+                        <td></td>
+                        <td><i class="icon-status-yes">in research</i></td>
+                    </tr>                    
+                </table>
             </div>
         </div>
     </div>
 
 
-    <div class="section-overview" id="overview">
-                        
-
+    <div class="section-display-models-block" id="block">
+        
 <!-- Doc  -->
 <div class="row text">
 
     <div class="ds_24">
-        <p>In your SCSS style add options and include mw-grid core, like this:</p>
+        <h2>Block model</h2>
+        <p>Block model is simple and solid oldschool recepsion for make modular grid layout</p>
+
+        <ul>
+            <li>Columns in block row display like blocks<code class="css-property">float: left;</code></li>
+            <li>Columns order can be reverse (<code class="css-class">."row-reverse"</code> )</li>
+        </ul>
+
+
+        <p>Columns can be nested. Always it's need <code class="css-class">".row"</code> wrapper </p>
     </div>
 
 </div>
 
-          
+
+<!-- Demo -->
+<div class="demo-rows">
+
+        
+    <div class="demo-block">"row row-reverse"
+
+        <div class="row row-reverse">
+            <div class="mv_12">
+                <div class="demo-block">column 1
+                </div>
+            </div>
+            <div class="mv_12">
+                <div class="demo-block">column 2
+                </div>
+            </div>                    
+        </div>
+    </div>
+
+
+</div>
+
+
 <!-- Code -->
 <div class="row">
     <div class="mv_24">
         <pre>
-            <code class="scss-language">
-// Options: 
-$columns: 24;
-$columns_gap: 10;
-$container_width: 1200;
-$breakpoints_between: 'responsive'; // 'responsive' || 'fixed' 
- 
-$modules_display: ( 
-    block: 1,
-    inline-block: 0,
-    flex: 1
-);
- 
-$devices: ( 
-    mv_: (
-        breakpoint: 320,
-        container_max: 300,
-        font_base: 15px,
-        ms_coeff: 1.10,
-    ),
-    tb_: (
-        breakpoint: 768,
-        container_max: 750,
-        font_base: 15px,
-        ms_coeff: 1.17,
-    ), 
-    ds_: (
-        breakpoint: 1024,
-        container_max: 960,
-        font_base: 16px,
-        ms_coeff: 1.17
-    )     
-);
+            <code class="html-language">
 
-// Import module
-@import 'node_modules/mw-grid/src/_mwgrid.scss';
+&lt;div class="demo-block"&gt;"row row-reverse"
+
+    &lt;div class="row row-reverse"&gt;
+        &lt;div class="mv_12"&gt;
+            &lt;div class="demo-block"&gt;column 1
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="mv_12"&gt;
+            &lt;div class="demo-block"&gt;column 2
+            &lt;/div&gt;
+        &lt;/div&gt;                    
+    &lt;/div&gt;
+&lt;/div&gt;
+
             </code>
         </pre>
     </div>
@@ -303,11 +370,148 @@ $devices: (
 </div>
 
 
+        
+    </div>
 
+    <div class="section-display-models-inline-block" id="inline-block">
+        
+<!-- Doc  -->
+<div class="row text">
+
+    <div class="ds_24">
+        <h2>Inline-block model</h2>
+        <p>Inline-Block is more powerfull than block and more cross-browser than flex. It has vertical aligment columns in row</p>
+
+        <ul>
+            <li>Columns in inline-block row display like inline-blocks <code class="css-property">display: inline-blocks;</code></li>
+            <li>Columns order can be reverse (<code class="css-class">."row-reverse"</code>)</li>
+            <li>Columns can be aligned vertically (<code class="css-class">."middle"</code> and other)</li>
+            <li>Row has nulled font-size (<code class="css-property">font-size: 0</code> )</li>
+        </ul>
 
     </div>
 
+</div>
 
+
+<!-- Demo -->
+<div class="demo-rows">
+
+    <div class="demo-block">"row-line middle"
+
+        <div class="row-line middle">
+            <div class="mv_12">
+                <div class="demo-block" style="font-size: 1rem">column 1<br>we need set font-size to element in a row-line
+                </div>
+            </div>
+            <div class="mv_12">
+                <div class="demo-block" style="font-size: 1rem">column 2 
+                </div>
+            </div>                    
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Code -->
+<div class="row">
+    <div class="mv_24">
+        <pre>
+            <code class="html-language">
+
+&lt;div class="demo-block"&gt;"row-line middle"
+
+    &lt;div class="row-line middle"&gt;
+        &lt;div class="mv_12"&gt;
+            &lt;div class="demo-block" style="font-size: 1rem"&gt;column 1&lt;br&gt;we need set font-size to element in a row-line
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="mv_12"&gt;
+            &lt;div class="demo-block" style="font-size: 1rem"&gt;column 2 
+            &lt;/div&gt;
+        &lt;/div&gt;                    
+    &lt;/div&gt;
+&lt;/div&gt;
+
+            </code>
+        </pre>
+    </div>
+ 
+</div>
+
+
+        
+    </div>
+
+    <div class="section-display-models-flex" id="flex">
+        
+<!-- Doc  -->
+<div class="row text">
+
+    <div class="ds_24">
+        <h2>Flex model</h2>
+        <p>Flex is most powerfull way to arrange columns inside rows. It has columns same height and specific columns order.</p>
+
+        <ul>
+            <li>Columns in flex row display like elements in flex container <code class="css-property">display: flex</code></li>
+            <li>Columns order can be reverse (<code class="css-class">."row-reverse"</code>)</li>
+            <li>Columns can be aligned vertically (<code class="css-class">."middle"</code> and other)</li>
+            <li>Columns can be the same height (<code class="css-class">."stretch"</code>)</li>
+        </ul>
+
+    </div>
+
+</div>
+
+
+<!-- Demo -->
+<div class="demo-rows">
+
+    <div class="demo-block">"row-flex stretch"
+
+        <div class="row-flex stretch">
+            <div class="mv_12">
+                <div class="demo-block">column 1<br>columns can be <br>the same height
+                </div>
+            </div>
+            <div class="mv_12">
+                <div class="demo-block">column 2 
+                </div>
+            </div>                    
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Code -->
+<div class="row">
+    <div class="mv_24">
+        <pre>
+            <code class="html-language">
+
+&lt;div class="demo-block"&gt;"row-flex stretch"
+
+    &lt;div class="row-flex stretch"&gt;
+        &lt;div class="mv_12"&gt;
+            &lt;div class="demo-block"&gt;column 1&lt;br&gt;columns can be &lt;br&gt;the same height
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="mv_12"&gt;
+            &lt;div class="demo-block"&gt;column 2 
+            &lt;/div&gt;
+        &lt;/div&gt;                    
+    &lt;/div&gt;
+&lt;/div&gt;
+
+            </code>
+        </pre>
+    </div>
+ 
+</div>
+        
+    </div>    
 
                     
 
@@ -340,13 +544,11 @@ $devices: (
 
         
     
-        
-    
 
     
     
 
-    <li class="menu-main__item  active ">
+    <li class="menu-main__item   ">
         <a href="index.html" class="menu-main__item-link">Overview</a>
 
         
@@ -376,11 +578,13 @@ $devices: (
 
         
     
+        
+    
 
     
     
 
-    <li class="menu-main__item menu-item-has-children  ">
+    <li class="menu-main__item menu-item-has-children active ">
         <a href="display-models.html" class="menu-main__item-link">Display models</a>
 
         

@@ -1,0 +1,91 @@
+{% extends "layout/_layout.html" %}
+
+
+{% set page_title = 'Display models' %}
+
+
+{% block main %}
+
+    <div class="section-display-models">
+        <div class="row text">
+            <div class="mv_24">
+                <h1>Display models</h1>
+
+                <p>Mw-rid has 3 display models:  "block", "inline-block" and "flexbox".
+                    And they are CSS-classes for row wrap: <code class="css-class">".row"</code>, <code class="css-class">".row-line"</code> and <code class="css-class">".row-flex"</code></p>
+
+                <ul>
+                    <li>3 models flexbox, block and inline-block</li>
+                    <li>Set models in SCSS options (<code class="scss-var">$display_models</code>)</li>
+                    <li>Drive models with 3 CSS-classes is deadly simple</li>
+                </ul>
+
+                <p>Display models is set in SCSS obj <code class="scss-var">$display_models</code></p>
+
+                <table>
+                    <tr>
+                        <th></th> <th>Block</th><th>Inline-Block</th><th>Flex</th>
+                    </tr>
+                    <tr>
+                        <td>Display</td>
+                        <td><code class="css-property">block</code></td>
+                        <td><code class="css-property">inline-block</code></td>
+                        <td><code class="css-property">flex</code></td>
+                    </tr>
+                    <tr>
+                        <td>CSS-class</td>
+                        <td><code class="css-class">".row"</code></td>
+                        <td><code class="css-class">".row-line"</code></td>
+                        <td><code class="css-class">".row-flex"</code></td>
+                    </tr>                    
+                    <tr>
+                        <td>Reverse</td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                    </tr>
+                    <tr>
+                        <td>Horizontal aligment</td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                    </tr>
+                    <tr>
+                        <td>Vertical aligment</td>
+                        <td></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                    </tr>
+                    <tr>
+                        <td>Columns Same Height</td>
+                        <td></td>
+                        <td></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                    </tr>
+
+                    <tr>
+                        <td>Specific order</td>
+                        <td></td>
+                        <td></td>
+                        <td><i class="icon-status-yes">in research</i></td>
+                    </tr>                    
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section-display-models-block" id="block">
+        {% include "blocks/display-models/view/_display_models_block.html" %}        
+    </div>
+
+    <div class="section-display-models-inline-block" id="inline-block">
+        {% include "blocks/display-models/view/_display_models_inline_block.html" %}        
+    </div>
+
+    <div class="section-display-models-flex" id="flex">
+        {% include "blocks/display-models/view/_display_models_flex.html" %}        
+    </div>    
+
+{% endblock %}
+

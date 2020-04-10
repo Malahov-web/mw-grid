@@ -74,9 +74,37 @@ p{
     font-weight: 300;
 
 }
-img{
+img {
     display: block;
     max-width: 100%; width: 100%; height: auto;
+}
+
+table {
+    // width: 100%;
+    border-collapse: collapse;
+    tr {
+        th {
+            // background-color: $grey_lighter;
+            background-color: $grey_super_light;
+
+            border: 1px solid $grey_light;
+            @include h_rhytm('forms_element', $fb);  
+            padding-top: 1/2*$l_h_base;
+            padding-bottom: 1/2*$l_h_base;            
+        }
+        td {
+            border: 1px solid $grey_light;
+            vertical-align: middle;     
+            
+            @include h_rhytm('forms_element', $fb);  
+            padding-top: 1/2*$l_h_base;
+            padding-bottom: 1/2*$l_h_base;
+        }
+        td:first-child {
+            font-weight: normal;
+            padding-right: 2.5*$fb;
+        }
+    }
 }
 
 .themify:before,
@@ -85,7 +113,9 @@ img{
     display: block;
 }
 
-
+/* Special chars for this 
+✔ &#10004;
+*/
 
 
 
@@ -122,9 +152,10 @@ code.scss-var {
 }
 
 pre {
+    margin-bottom: 0;
 
     code {
-
+        margin: 0;
 
     }
 }
