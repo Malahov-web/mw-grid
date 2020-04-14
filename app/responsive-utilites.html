@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Features</title>
+    <title>Responsive utilites</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
     <meta content='true' name='HandheldFriendly'>
@@ -231,15 +231,329 @@
 
                 
 
-    <div class="section-display-models">
+    <div class="section-responsive-utilites">
         <div class="row text">
             <div class="mv_24">
                 <h1>Responsive utilites</h1>
+                <p>Mw-grid has 2 utilites for responsive display (show/hide) elements.
+                They are CSS-classes <code class="css-class">".*hidden"</code> and <code class="css-class">".*visible"</code>, which add <code class="css-property">display: none;</code></p>
+                <p>'Hidden' show on small and hide on large up from breakpoint (Hide up)
+                    <br>'Visible' show on large and hide on small down from breakpoint (Hide down)
+                </p>
 
-                <p>Page in research, see compiled CSS styles, or SCSS core files</p>
+                <ul>
+                    <!-- <li>'Hidden' show on small and hide on large up from breakpoint (Hide up)</li> -->
+                    <!-- <li>'Visible' show on large and hide on small down from breakpoint (Hide down)</li> -->
+
+                    <li><code class="css-class">".*hidden"</code> use media <code class="css-property">min-width</code> to hide</li>
+                    <li><code class="css-class">".*visible"</code> use media <code class="css-property">max-width</code> to hide</li>
+                    <li>Mix 'Hidden' and 'Visible' to show on one device only</li>
+                    <li>These classes add left and right paddings (columns gap) to element. You can use <code class="css-class">".collapse"</code> to reset it when you need</li>
+                </ul> 
+
+                <p>With default breakpoints it looks like this:</p>
+
+                <div class="table-outer">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Mobile Vertical <span class="font-normal">(mv_)</span><br>320px</th>
+                            <th>Mobile Horizontal <span class="font-normal">(mh_)</span><br>576px</th>
+                            <th>Tablets <span class="font-normal">(tb_)</span> <br>768px</th>
+                            <th>Desktops <span class="font-normal">(ds_)</span> <br>1024px</th>
+                            <th>High Definition <span class="font-normal">(hd_)</span> <br>1366px</th>
+                        </tr>
+                        <tr>
+                            <td><code class="css-class">".mv_hidden"</code></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                        </tr>
+                        <tr>
+                            <td><code class="css-class">".mh_hidden"</code></td>
+                            <td><span class="color-success">show</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                        </tr>
+                        <tr>
+                            <td><code class="css-class">".tb_hidden"</code></td>
+                            <td><span class="color-success">show</span></td>
+                            <td><span class="color-success">show</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                        </tr>
+                        <tr>
+                            <td><code class="css-class">".ds_hidden"</code></td>
+                            <td><span class="color-success">show</span></td>
+                            <td><span class="color-success">show</span></td>
+                            <td><span class="color-success">show</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                        </tr>
+                        <tr>
+                            <td><code class="css-class">".hd_hidden"</code></td>
+                            <td><span class="color-success">show</span></td>
+                            <td><span class="color-success">show</span></td>
+                            <td><span class="color-success">show</span></td>
+                            <td><span class="color-success">show</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td colspan="6"><hr></td>
+                        </tr>
+                    
+                        <tr>
+                            <th></th>
+                            <th>Mobile Vertical <span class="font-normal">(mv_)</span><br>320px</th>
+                            <th>Mobile Horizontal <span class="font-normal">(mh_)</span><br>576px</th>
+                            <th>Tablets <span class="font-normal">(tb_)</span> <br>768px</th>
+                            <th>Desktops <span class="font-normal">(ds_)</span> <br>1024px</th>
+                            <th>High Definition <span class="font-normal">(hd_)</span> <br>1366px</th>
+                        </tr>
+                        <tr>
+                            <td><code class="css-class">".mv_visible"</code></td>
+                            <td><span class="color-success">show</span></td> 
+                            <td><span class="color-success">show</span></td> 
+                            <td><span class="color-success">show</span></td> 
+                            <td><span class="color-success">show</span></td> 
+                            <td><span class="color-success">show</span></td> 
+                        </tr>
+                        <tr>
+                            <td><code class="css-class">".mh_visible"</code></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-success">show</span></td> 
+                            <td><span class="color-success">show</span></td> 
+                            <td><span class="color-success">show</span></td> 
+                            <td><span class="color-success">show</span></td> 
+                        </tr>
+                        <tr>
+                            <td><code class="css-class">".tb_visible"</code></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-success">show</span></td> 
+                            <td><span class="color-success">show</span></td> 
+                            <td><span class="color-success">show</span></td> 
+                        </tr>
+                        <tr>
+                            <td><code class="css-class">".ds_visible"</code></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-success">show</span></td> 
+                            <td><span class="color-success">show</span></td> 
+                        </tr>
+                        <tr>
+                            <td><code class="css-class">".hd_visible"</code></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-muted">hide</span></td>
+                            <td><span class="color-success">show</span></td>                        
+                        </tr>                    
+                    </table>
+                </div>
+
+                <table style="display: none">
+                    <tr>
+                        <th></th>
+                        <th>Mobile Vertical <span class="font-normal">(mv_)</span><br>320px</th>
+                        <th>Mobile Horizontal <span class="font-normal">(mh_)</span><br>576px</th>
+                        <th>Tablets <span class="font-normal">(tb_)</span> <br>768px</th>
+                        <th>Desktops <span class="font-normal">(ds_)</span> <br>1024px</th>
+                        <th>High Definition <span class="font-normal">(hd_)</span> <br>1366px</th>
+                    </tr>
+                    <tr>
+                        <td><code class="css-class">".mv_visible"</code></td>
+                        <td><span class="color-muted">hide</span></td>
+                        <td><span class="color-muted">hide</span></td>
+                        <td><span class="color-muted">hide</span></td>
+                        <td><span class="color-muted">hide</span></td>
+                        <td><span class="color-muted">hide</span></td>
+                    </tr>
+                    <tr>
+                        <td><code class="css-class">".mh_visible"</code></td>
+                        <td><span class="color-success">show</span></td>
+                        <td><span class="color-muted">hide</span></td>
+                        <td><span class="color-muted">hide</span></td>
+                        <td><span class="color-muted">hide</span></td>
+                        <td><span class="color-muted">hide</span></td>
+                    </tr>
+                    <tr>
+                        <td><code class="css-class">".tb_visible"</code></td>
+                        <td><span class="color-success">show</span></td>
+                        <td><span class="color-success">show</span></td>
+                        <td><span class="color-muted">hide</span></td>
+                        <td><span class="color-muted">hide</span></td>
+                        <td><span class="color-muted">hide</span></td>
+                    </tr>
+                    <tr>
+                        <td><code class="css-class">".ds_visible"</code></td>
+                        <td><span class="color-success">show</span></td>
+                        <td><span class="color-success">show</span></td>
+                        <td><span class="color-success">show</span></td>
+                        <td><span class="color-muted">hide</span></td>
+                        <td><span class="color-muted">hide</span></td>
+                    </tr>
+                    <tr>
+                        <td><code class="css-class">".hd_visible"</code></td>
+                        <td><span class="color-muted">hide</span></td>
+                        <td><span class="color-muted">hide</span></td>
+                        <td><span class="color-muted">hide</span></td>
+                        <td><span class="color-muted">hide</span></td>
+                        <td><span class="color-success">show</span></td>                        
+                    </tr>
+                </table>                
+
+
 
             </div>
         </div>
+    </div>
+
+
+    <div class="section-responsive-utilites" id="responsive-utilites">
+        <!-- Demo -->
+<div class="demo-rows">
+
+    <h4>Hidden</h4>
+
+    <div class="row ">
+
+        <div class="mv_24">
+            <div class="demo-block">Resize browser window to see hiden columns
+
+                <div class="row ">
+                    <div class="mv_12 hd_hidden" >
+                        <div class="demo-block">mv_12 ds_hidden
+                        </div>
+                    </div>
+                    <div class="mv_12 ds_hidden">
+                        <div class="demo-block">mv_12 tb_hidden
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>     
+    </div>
+
+    <h4>Visible</h4>
+
+    <div class="row ">
+
+        <div class="mv_24">
+            <div class="demo-block">Resize browser window to hide columns
+
+                <div class="row ">
+                    <div class="mv_12 hd_visible" >
+                        <div class="demo-block">mv_12 hd_visible
+                        </div>
+                    </div>
+                    <div class="mv_12 ds_visible">
+                        <div class="demo-block">mv_12 ds_visible
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>     
+    </div>
+
+    <h4>Hidden & Visible mix</h4>
+
+    <div class="row ">
+
+        <div class="mv_24">
+            <div class="demo-block">Resize browser window to see hiden column on ds_ and hide on tb_ down
+
+                <div class="row ">
+                    <div class="mv_12 tb_visible hd_hidden" >
+                        <div class="demo-block">mv_12 tb_visible hd_hidden
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>     
+    </div>
+
+</div>
+
+
+<!-- Code -->
+<div class="row">
+    <div class="mv_24">
+        <pre>
+            <code class="html-language">
+    &lt;h4&gt;Hidden&lt;/h4&gt;
+
+    &lt;div class="row "&gt;
+
+        &lt;div class="mv_24"&gt;
+            &lt;div class="demo-block"&gt;Resize browser window to see hiden columns
+
+                &lt;div class="row "&gt;
+                    &lt;div class="mv_12 hd_hidden" &gt;
+                        &lt;div class="demo-block"&gt;mv_12 ds_hidden
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mv_12 ds_hidden"&gt;
+                        &lt;div class="demo-block"&gt;mv_12 tb_hidden
+                        &lt;/div&gt;
+                    &lt;/div&gt;                    
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;     
+    &lt;/div&gt;
+
+    &lt;h4&gt;Visible&lt;/h4&gt;
+
+    &lt;div class="row "&gt;
+
+        &lt;div class="mv_24"&gt;
+            &lt;div class="demo-block"&gt;Resize browser window to hide columns
+
+                &lt;div class="row "&gt;
+                    &lt;div class="mv_12 hd_visible" &gt;
+                        &lt;div class="demo-block"&gt;mv_12 hd_visible
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mv_12 ds_visible"&gt;
+                        &lt;div class="demo-block"&gt;mv_12 ds_visible
+                        &lt;/div&gt;
+                    &lt;/div&gt;                    
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;     
+    &lt;/div&gt;
+
+    &lt;h4&gt;Hidden &amp; Visible mix&lt;/h4&gt;
+
+    &lt;div class="row "&gt;
+
+        &lt;div class="mv_24"&gt;
+            &lt;div class="demo-block"&gt;Resize browser window to see hiden column on ds_ and hide on tb_ down
+
+                &lt;div class="row "&gt;
+                    &lt;div class="mv_12 tb_visible hd_hidden" &gt;
+                        &lt;div class="demo-block"&gt;mv_12 tb_visible hd_hidden
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;     
+    &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+ 
+</div>
+
     </div>
 
 
@@ -383,8 +697,6 @@
 
     
     
-        
-    
 
         
     
@@ -394,7 +706,25 @@
     
     
 
-    <li class="menu-main__item menu-item-has-children active ">
+    <li class="menu-main__item  active ">
+        <a href="responsive-utilites.html" class="menu-main__item-link">Responsive utilites</a>
+
+        
+
+    </li>
+
+    
+    
+        
+    
+
+        
+    
+
+    
+    
+
+    <li class="menu-main__item menu-item-has-children  ">
         <a href="features.html" class="menu-main__item-link">Features</a>
 
         
@@ -414,22 +744,6 @@
                     <a href="#columns-same-height">Columns Same Height</a>
                 </li>
             </ul>
-        
-
-    </li>
-
-    
-    
-
-        
-    
-
-    
-    
-
-    <li class="menu-main__item   ">
-        <a href="responsive-utilites.html" class="menu-main__item-link">Responsive utilites</a>
-
         
 
     </li>

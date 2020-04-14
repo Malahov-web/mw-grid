@@ -79,6 +79,10 @@ img {
     max-width: 100%; width: 100%; height: auto;
 }
 
+.table-outer {
+    min-width: 100%;
+    overflow-x: scroll;
+}
 table {
     // width: 100%;
     border-collapse: collapse;
@@ -105,12 +109,32 @@ table {
             padding-right: 2.5*$fb;
         }
     }
+
+    /* table content */
+    hr {
+        opacity: 0;
+
+    }
+
 }
 
 .themify:before,
 .themify:after{
     vertical-align: middle;
     display: block;
+}
+
+/* fonts */
+.font-normal {
+    font-weight: 400;
+}
+
+/* colors */
+.color-success {
+    color: $success_color;
+}
+.color-muted {
+    color: $muted_color;
 }
 
 /* Special chars for this 

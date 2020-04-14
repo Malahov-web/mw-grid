@@ -1,3 +1,9 @@
+1.3.2 / 2020-04-14
+==================
+ * Added Demo: responsive-utilites
+ * Added LICENSE
+ * Fixed Demo CSS (main)
+
 1.3.1 / 2020-04-10
 ==================
  * Added Demo: collapse, display-models

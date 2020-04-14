@@ -46,12 +46,20 @@
     float: right;
     width: 100%;
 
-    // @media (min-width: #{map-get($devices, 'ds_')}px) {
     @media (min-width: get_grid_bp('ds_')+px) {
         width: calc(100% - #{$sidebar_width}px - #{$sidebar_offset});
-        // width: calc(100% - #{$sidebar_width}px );
+        // padding-right: $sidebar_width+px;
+    }
+    
+    $padding_right:  (360/100)+vw; 
+    $padding_right:  100vw / 360 * 100; 
+    // sidebar_width 
+    @media (min-width: get_grid_bp('hd_')+px) {
+        width: calc(100% - #{$sidebar_width}px - #{$sidebar_offset});
+        // width: calc(100% - #{$padding_right} );
 
-        padding-right: $sidebar_width+px
+        // padding-right: $padding_right;
+        padding-right: 18vw;
     }
 }
 

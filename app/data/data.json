@@ -222,7 +222,11 @@
         {
             "item-name": "Collapse",
             "item-link": "collapse"
-        },        
+        }, 
+        {
+            "item-name": "Responsive utilites",
+            "item-link": "responsive-utilites"
+        },   
         {
             "item-name": "Features",
             "item-link": "features",
@@ -246,11 +250,7 @@
 
             ]            
         },
-
-        {
-            "item-name": "Responsive utilites",
-            "item-link": "responsive-utilites"
-        },        
+     
         {
             "item-name": "Text utilites",
             "item-link": "text-utilites"
