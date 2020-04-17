@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Features</title>
+    <title>Text utilites</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
     <meta content='true' name='HandheldFriendly'>
@@ -231,16 +231,120 @@
 
                 
 
-    <div class="section-display-models">
+    <div class="section-text-utilites">
         <div class="row text">
             <div class="mv_24">
                 <h1>Text utilites</h1>
+                <p>Mw-grid has utilites for alignment. You can align text in elements with
+                    follow CSS-classes <code class="css-class">".lefted"</code>, <code class="css-class">".righted"</code>, <code class="css-class">".centered"</code> and <code class="css-class">".justifyed"</code>
+                </p>
+                <p>All alignment values are responsive, add breakpoint prefix to class name like <code class="css-class">".tb_centered"</code> to align on tablets and large.</p>
 
-                <p>Page in research, see compiled CSS styles, or SCSS core files</p>
+                <ul>
+                    <li>4 values for aligning</li>
+                    <li>All values are responsive, have class for each device (<code class="css-class">".tb_centered"</code>)</li>
+                    <li>All responsive classes work up from breakpoint</li>
+                </ul>
+
 
             </div>
         </div>
     </div>
+
+    <div class="section-text-utilites" id="text-utilites">
+        <!-- Demo -->
+<div class="demo-rows">
+
+
+    <div class="row ">
+
+        <div class="mv_24 centered">
+            <div class="demo-block">
+                .centered
+                <div class="row">
+                    <div class="mv_12 mv_offset_6 centered">
+                        <div class="demo-block">
+                            Text is centered on all devices
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>  
+
+    </div>
+
+    <div class="row ">
+
+        <div class="mv_24 centered">
+            <div class="demo-block">
+                .mv_centered .td_lefted .hd_righted
+                <div class="row">
+                    <div class="mv_12 mv_offset_6 mv_centered  td_lefted  hd_righted">
+                        <div class="demo-block">
+                            Text is righted on HD, 
+                            <br> lefted on Tablets,
+                            <br> and centered on Mobiles
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>  
+
+    </div> 
+
+</div>    
+
+
+
+
+
+<!-- Code -->
+<div class="row">
+    <div class="mv_24">
+        <pre>
+            <code class="html-language">
+    &lt;div class="row "&gt;
+
+        &lt;div class="mv_24 centered"&gt;
+            &lt;div class="demo-block"&gt;
+                .centered
+                &lt;div class="row"&gt;
+                    &lt;div class="mv_12 mv_offset_6 centered"&gt;
+                        &lt;div class="demo-block"&gt;
+                            Text is centered on all devices
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;            
+        &lt;/div&gt;  
+
+    &lt;/div&gt;
+
+    &lt;div class="row "&gt;
+
+        &lt;div class="mv_24 centered"&gt;
+            &lt;div class="demo-block"&gt;
+                .mv_centered .td_lefted .hd_righted
+                &lt;div class="row"&gt;
+                    &lt;div class="mv_12 mv_offset_6 mv_centered  td_lefted  hd_righted"&gt;
+                        &lt;div class="demo-block"&gt;
+                            Text is righted on HD, 
+                            &lt;br&gt; lefted on Tablets,
+                            &lt;br&gt; and centered on Mobiles
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;            
+        &lt;/div&gt;  
+
+    &lt;/div&gt; 
+            </code>
+        </pre>
+    </div>
+ 
+</div>
+
+    </div>    
 
 
                     
@@ -404,13 +508,11 @@
 
         
     
-        
-    
 
     
     
 
-    <li class="menu-main__item menu-item-has-children active ">
+    <li class="menu-main__item menu-item-has-children  ">
         <a href="features.html" class="menu-main__item-link">Features</a>
 
         
@@ -439,11 +541,13 @@
 
         
     
+        
+    
 
     
     
 
-    <li class="menu-main__item   ">
+    <li class="menu-main__item  active ">
         <a href="text-utilites.html" class="menu-main__item-link">Text utilites</a>
 
         

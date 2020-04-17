@@ -1,21 +1,34 @@
 {% extends "layout/_layout.html" %}
 
 
-{% set page_title = 'Features' %}
+{% set page_title = 'Text utilites' %}
 
 
 {% block main %}
 
-    <div class="section-display-models">
+    <div class="section-text-utilites">
         <div class="row text">
             <div class="mv_24">
                 <h1>Text utilites</h1>
+                <p>Mw-grid has utilites for alignment. You can align text in elements with
+                    follow CSS-classes <code class="css-class">".lefted"</code>, <code class="css-class">".righted"</code>, <code class="css-class">".centered"</code> and <code class="css-class">".justifyed"</code>
+                </p>
+                <p>All alignment values are responsive, add breakpoint prefix to class name like <code class="css-class">".tb_centered"</code> to align on tablets and large.</p>
 
-                <p>Page in research, see compiled CSS styles, or SCSS core files</p>
+                <ul>
+                    <li>4 values for aligning</li>
+                    <li>All values are responsive, have class for each device (<code class="css-class">".tb_centered"</code>)</li>
+                    <li>All responsive classes work up from breakpoint</li>
+                </ul>
+
 
             </div>
         </div>
     </div>
+
+    <div class="section-text-utilites" id="text-utilites">
+        {% include "blocks/text-utilites/view/_text-utilites.html" %}
+    </div>    
 
 
 {% endblock %}

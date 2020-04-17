@@ -290,7 +290,6 @@
     .demo-block {
         background-color: #fff;
         background: linear-gradient(to right, #8D6329, #C69A5D);
-        
     }
 }
 
@@ -316,5 +315,11 @@
             position: relative;
             height: 100%;
         }
+    }
+}
+
+.section-text-utilites {
+    .demo-block {
+        text-align: inherit;
     }
 }
