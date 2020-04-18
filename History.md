@@ -1,3 +1,11 @@
+2.0.1 / 2020-04-18
+==================
+ * Fixed Readme.md (default breakpoints, deprecated versions)
+
+2.0.0 / 2020-04-17
+==================
+ * Update Readme.md (default breakpoints)
+
 1.3.3 / 2020-04-17
 ==================
  * Added Demo: text-utilites

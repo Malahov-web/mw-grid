@@ -1,8 +1,17 @@
 # mw-grid
 Powerfull and lightweight CSS layout framework for creating your layout like 'container/row/column' support block, inline-block and flexbox models.
 
-## Example
+`Attention!` 
+> Since version 1.3.0 i added new default breakpoints. Now breakpoints such as in the example below  
+> Versions 1.3.0-1.3.3 are deprecated now  
+> Sorry, if it broke your layout.  
+> 2 ways to fix it:
+* Override breakpoints in options in your SCSS-file ("mh_", "tb_", "ds_", and "hd_")
+* install v 1.2.1  ( `npm i mw-grid@1.2.1` )
 
+
+## Example
+-----------------------------------
 Your scss:
 ```scss
 
@@ -22,7 +31,13 @@ $devices: (
     mv_: (
         breakpoint: 320,
         container_max: 300,
-        font_base: 15px,
+        font_base: 14px,
+        ms_coeff: 1.10,
+    ),
+    mh_: (
+        breakpoint: 576,
+        container_max: 540,
+        font_base: 14px,
         ms_coeff: 1.10,
     ),
     tb_: (
@@ -34,9 +49,15 @@ $devices: (
     ds_: (
         breakpoint: 1024,
         container_max: 960,
-        font_base: 15px,
+        font_base: 16px,
         ms_coeff: 1.17
-    )     
+    ),
+    hd_: (
+        breakpoint: 1366,
+        container_max: 1200,
+        font_base: 16px,
+        ms_coeff: 1.17
+    )   
 );
 
 // Import module
@@ -44,7 +65,7 @@ $devices: (
 ```
 
 ## Installation
-
+-----------------------------------
 Clone the repo: 
 ```bash
 git clone git@github.com:Malahov-web/mw-grid.git
@@ -55,7 +76,13 @@ Install with [npm](https://nodejs.org/en/):
 $ npm install mw-grid --save-dev
 ```
 
-## Usage 
+## Demo
+-----------------------------------
+See demo (small descriptions, exapmles and code) in this 'demo' directory:
+`node_modules/mw-grid/demo/index.html`
+
+## Usage
+-----------------------------------
 ### HTML code - CSS-classes
 Standart structure classes `.section`, `.container`, `.row`, and columns like `.mv_` or `[class*="ds_"]`
 
@@ -105,7 +132,3 @@ You also have some utilites (SCSS functions) to help you work with the settings.
     }
 }  
 ```
-
-### Demo
-See demo (small descriptions, exapmles and code) in this 'demo' directory:
-`node_modules/mw-grid/demo/index.html`
