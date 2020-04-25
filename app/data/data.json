@@ -226,7 +226,11 @@
         {
             "item-name": "Responsive utilites",
             "item-link": "responsive-utilites"
-        },   
+        },     
+        {
+            "item-name": "Text utilites",
+            "item-link": "text-utilites"
+        },
         {
             "item-name": "Features",
             "item-link": "features",
@@ -249,11 +253,6 @@
                 }
 
             ]            
-        },
-     
-        {
-            "item-name": "Text utilites",
-            "item-link": "text-utilites"
         }
     ],    
 

@@ -277,7 +277,13 @@ $devices: (
     mv_: (
         breakpoint: 320,
         container_max: 300,
-        font_base: 15px,
+        font_base: 14px,
+        ms_coeff: 1.10,
+    ),
+    mh_: (
+        breakpoint: 576,
+        container_max: 540,
+        font_base: 14px,
         ms_coeff: 1.10,
     ),
     tb_: (
@@ -291,8 +297,14 @@ $devices: (
         container_max: 960,
         font_base: 16px,
         ms_coeff: 1.17
-    )     
-);
+    ),
+    hd_: (
+        breakpoint: 1366,
+        container_max: 1200,
+        font_base: 16px,
+        ms_coeff: 1.17
+    )   
+);  
 
 // Import module
 @import 'node_modules/mw-grid/src/_mwgrid.scss';
@@ -467,6 +479,22 @@ $devices: (
 
     
     
+
+        
+    
+
+    
+    
+
+    <li class="menu-main__item   ">
+        <a href="text-utilites.html" class="menu-main__item-link">Text utilites</a>
+
+        
+
+    </li>
+
+    
+    
         
     
 
@@ -496,22 +524,6 @@ $devices: (
                     <a href="#columns-same-height">Columns Same Height</a>
                 </li>
             </ul>
-        
-
-    </li>
-
-    
-    
-
-        
-    
-
-    
-    
-
-    <li class="menu-main__item   ">
-        <a href="text-utilites.html" class="menu-main__item-link">Text utilites</a>
-
         
 
     </li>
