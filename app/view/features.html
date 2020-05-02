@@ -6,17 +6,85 @@
 
 {% block main %}
 
-    <div class="section-display-models">
+    <div class="section-features">
         <div class="row text">
             <div class="mv_24">
                 <h1>Features</h1>
 
-                <p>Page in research, see compiled CSS styles, or SCSS core files</p>
+                <p>Mw-grid has several features - this is horizontal alignment, vertical alignment, reverse, columns dasem height, and in the near future specific columns order.</p>
+                <p><a href="/display-models.html#block">Block</a> and <a href="/display-models.html#inline-block">Inline-block</a> models supports some of them, <a href="/display-models.html#flex">Flex</a> model support them all</p>
+
+
+                <table>
+                    <tr>
+                        <th></th> <th>Block</th><th>Inline-Block</th><th>Flex</th>
+                    </tr>                  
+                    <tr>
+                        <td>Reverse</td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                    </tr>
+                    <tr>
+                        <td>Horizontal aligment</td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                    </tr>
+                    <tr>
+                        <td>Vertical aligment</td>
+                        <td></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                    </tr>
+                    <tr>
+                        <td>Columns Same Height</td>
+                        <td></td>
+                        <td></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                    </tr>
+
+                    <tr>
+                        <td>Specific order</td>
+                        <td></td>
+                        <td></td>
+                        <td><i class="icon-status-yes">in research</i></td>
+                    </tr>                    
+                </table>
 
             </div>
         </div>
     </div>
 
+
+    <div class="section-features-horizontal-alignment section-columns-offsets" id="horizontal-alignment">
+        {% include "blocks/features/view/_features_horizontal_alignment.html" %}        
+    </div>
+
+
+    <div class="row text">
+        <div class="ds_24">
+            <h2>Vertical alignment</h2>
+            <p>Block in research</p>
+
+        </div>
+    </div>
+
+    <div class="row text">
+        <div class="ds_24">
+            <h2>Ordering </h2>
+            <p>Block in research</p>
+
+        </div>
+    </div>
+
+    <div class="row text">
+        <div class="ds_24">
+            <h2>Columns Same Height</h2>
+            <p>Block in research</p>
+
+        </div>
+    </div>
 
 {% endblock %}
 

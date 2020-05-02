@@ -1,3 +1,7 @@
+2.0.3 / 2020-04-31
+==================
+ * Added Demo: Features - horizontal-aligment
+
 2.0.2 / 2020-04-24
 ==================
  * Update Demo: text-utilites

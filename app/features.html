@@ -231,17 +231,216 @@
 
                 
 
-    <div class="section-display-models">
+    <div class="section-features">
         <div class="row text">
             <div class="mv_24">
                 <h1>Features</h1>
 
-                <p>Page in research, see compiled CSS styles, or SCSS core files</p>
+                <p>Mw-grid has several features - this is horizontal alignment, vertical alignment, reverse, columns dasem height, and in the near future specific columns order.</p>
+                <p><a href="/display-models.html#block">Block</a> and <a href="/display-models.html#inline-block">Inline-block</a> models supports some of them, <a href="/display-models.html#flex">Flex</a> model support them all</p>
+
+
+                <table>
+                    <tr>
+                        <th></th> <th>Block</th><th>Inline-Block</th><th>Flex</th>
+                    </tr>                  
+                    <tr>
+                        <td>Reverse</td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                    </tr>
+                    <tr>
+                        <td>Horizontal aligment</td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                    </tr>
+                    <tr>
+                        <td>Vertical aligment</td>
+                        <td></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                    </tr>
+                    <tr>
+                        <td>Columns Same Height</td>
+                        <td></td>
+                        <td></td>
+                        <td><i class="icon-status-yes">✔</i></td>
+                    </tr>
+
+                    <tr>
+                        <td>Specific order</td>
+                        <td></td>
+                        <td></td>
+                        <td><i class="icon-status-yes">in research</i></td>
+                    </tr>                    
+                </table>
 
             </div>
         </div>
     </div>
 
+
+    <div class="section-features-horizontal-alignment section-columns-offsets" id="horizontal-alignment">
+        
+<!-- Doc  -->
+<div class="row text">
+
+    <div class="ds_24">
+        <h2>Horizontal alignment</h2>
+        <p>Нou can control the horizontal alignment of columns using <a href="/columns.html#offsets">offsets</a>.
+        <br>To form the offset CSS-class to the device name add the key word "offset" and size - the number of columns, like <code class="css-class">".ds_offset_2"</code>. </p>
+
+        <ul>
+            <li>Use columns offsets</li>
+            <li>Horizontal alignment is responsive - work up from breakpoint</li>
+            <li>Supports by all display models</li>
+        </ul>
+
+
+        <!-- <p>Columns can be nested. Always it's need <code class="css-class">".row"</code> wrapper </p> -->
+    </div>
+
+</div>
+
+
+<!-- Demo -->
+<div class="demo-rows">
+    <div class="row">
+        <div class="mv_2 mv_offset_1">
+            <div class="demo-block">offset_1
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="mv_2 mv_offset_2">
+            <div class="demo-block">offset_2
+            </div>
+        </div>
+        <div class="mv_2 mv_offset_2">
+            <div class="demo-block">offset_2
+            </div>
+        </div>                
+    </div>
+    
+    <div class="row">
+        <div class="mv_3 mv_offset_3">
+            <div class="demo-block">offset_3
+            </div>
+        </div>
+        <div class="mv_3 mv_offset_0">
+            <div class="demo-block">offset_0
+            </div>
+        </div>
+        <div class="mv_3 mv_offset_3 ds_offset_0">
+            <div class="demo-block">ds_offset_0
+            </div>
+        </div>                    
+    </div>
+
+     <div class="row">
+        <div class="mv_12 mv_offset_12">
+            <div class="demo-block">offset_12
+            </div>
+        </div>
+    </div>
+
+     <div class="row">
+        <div class="mv_20 mv_offset_2">
+            <div class="demo-block">offset_2
+            </div>
+        </div>
+    </div>            
+
+</div>
+
+<!-- Code -->
+<div class="row">
+    <div class="mv_24">
+        <pre>
+            <code class="html-language">
+&lt;div class="row"&gt;
+    &lt;div class="mv_2 mv_offset_1"&gt;
+        &lt;div class="demo-block"&gt;offset_1
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+    &lt;div class="mv_2 mv_offset_2"&gt;
+        &lt;div class="demo-block"&gt;offset_2
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="mv_2 mv_offset_2"&gt;
+        &lt;div class="demo-block"&gt;offset_2
+        &lt;/div&gt;
+    &lt;/div&gt;                
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+    &lt;div class="mv_3 mv_offset_3"&gt;
+        &lt;div class="demo-block"&gt;offset_3
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="mv_3 mv_offset_0"&gt;
+        &lt;div class="demo-block"&gt;offset_0
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="mv_3 mv_offset_3 ds_offset_0"&gt;
+        &lt;div class="demo-block"&gt;ds_offset_0
+        &lt;/div&gt;
+    &lt;/div&gt;                    
+&lt;/div&gt;
+
+ &lt;div class="row"&gt;
+    &lt;div class="mv_12 mv_offset_12"&gt;
+        &lt;div class="demo-block"&gt;offset_12
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+ &lt;div class="row"&gt;
+    &lt;div class="mv_20 mv_offset_2"&gt;
+        &lt;div class="demo-block"&gt;offset_2
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+ 
+</div>
+
+
+        
+    </div>
+
+
+    <div class="row text">
+        <div class="ds_24">
+            <h2>Vertical alignment</h2>
+            <p>Block in research</p>
+
+        </div>
+    </div>
+
+    <div class="row text">
+        <div class="ds_24">
+            <h2>Ordering </h2>
+            <p>Block in research</p>
+
+        </div>
+    </div>
+
+    <div class="row text">
+        <div class="ds_24">
+            <h2>Columns Same Height</h2>
+            <p>Block in research</p>
+
+        </div>
+    </div>
 
                     
 
