@@ -1,4 +1,8 @@
-2.0.3 / 2020-04-31
+2.0.3 / 2020-05-06
+==================
+ * Added Demo: Features - vertical-aligment
+
+2.0.3 / 2020-05-01
 ==================
  * Added Demo: Features - horizontal-aligment
 

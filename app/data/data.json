@@ -236,12 +236,12 @@
             "item-link": "features",
             "submenu" : [
                 {
-                    "item-name" : "Horizontal Aligment",
-                    "item-link": "#horizontal-aligment"
+                    "item-name" : "Horizontal Alignment",
+                    "item-link": "#horizontal-alignment"
                 },
                 {
-                    "item-name" : "Vertical Aligment",
-                    "item-link": "#vertical-aligment"
+                    "item-name" : "Vertical Alignment",
+                    "item-link": "#vertical-alignment"
                 },
                 {
                     "item-name" : "Ordering (Reverse)",

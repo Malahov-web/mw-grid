@@ -270,11 +270,22 @@
     color: $white;
 }
 
+.demo-inline-block {
+    // margin-bottom: 1*$l_h_base;
+    width: 100%;
+    height: auto;
+    padding: 1em;
+    background-color: #987;
+    background: linear-gradient(to right, #5786AD, #1F405B);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #e9e8e7;
+}
 
-
-.section-columns-offsets {
+.section-columns-offsets,
+.ssection-features-vertical-alignment {
     .demo-rows {
-        .row {
+        [class*=row] {
             margin-bottom: 1*$l_h_base;   
             background-color: $grey_super_light;
             .demo-block {
