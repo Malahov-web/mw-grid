@@ -559,14 +559,81 @@
 
         
     </div>
-    
+   
+    <div class="section-features-ordering section-columns-offsets" id="ordering">
+        
+<!-- Doc  -->
+<div class="row text">
 
-    <div class="row text">
-        <div class="ds_24">
-            <h2>Ordering </h2>
-            <p>Block in research</p>
+    <div class="ds_24">
+        <h2>Ordering</h2>
+        <p>For change ordering  mw-grid has class <code class="css-class">".row-reverse"</code> which you can add to row and change columns direction from left-to-right to right-to-left.</p>
 
+        <ul>
+            <li>1 universal class</li>
+            <li>Use <code class="css-property">float: right</code> for block model, <code class="css-property">direction : ltr</code> for inline-block and <code class="css-property">
+            flex-direction: row-reverse</code> for flex</li>
+            <li>Non-responsive - class set alignment for all breakpoints</li>
+            <li>Supports by all display models</li>
+            <li>!Notice for inline-block model - I forcibly changed the direction for the columns inside the .row-line to default <code class="css-property">direction : rtl</code></li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+<!-- Demo -->
+<div class="demo-rows">
+
+
+    <div class="row-line  row-reverse">
+        <div class="ds_8">
+            <div class="demo-inline-block">First column
+            </div>          
         </div>
+        <div class="ds_8">
+            <div class="demo-inline-block">Second column
+            </div>              
+        </div>
+        <div class="ds_8">
+            <div class="demo-inline-block">Third column
+            </div>              
+        </div>
+    </div>
+
+
+
+</div>
+
+<!-- Code -->
+<div class="row">
+    <div class="mv_24">
+        <pre>
+            <code class="html-language">
+    &lt;div class="row-flex  row-reverse"&gt;
+        &lt;div class="ds_8"&gt;
+            &lt;div class="demo-inline-block"&gt;First column
+            &lt;/div&gt;          
+        &lt;/div&gt;
+        &lt;div class="ds_8"&gt;
+            &lt;div class="demo-inline-block"&gt;Second column
+            &lt;/div&gt;              
+        &lt;/div&gt;
+        &lt;div class="ds_8"&gt;
+            &lt;div class="demo-inline-block"&gt;Third column
+            &lt;/div&gt;              
+        &lt;/div&gt;
+    &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+ 
+</div>
+
+
+        
     </div>
 
     <div class="row text">
@@ -774,7 +841,7 @@
                     <a href="#vertical-alignment">Vertical Alignment</a>
                 </li>
                 <li>
-                    <a href="#ordering-reverse">Ordering (Reverse)</a>
+                    <a href="#ordering">Ordering (Reverse)</a>
                 </li>
                 <li>
                     <a href="#columns-same-height">Columns Same Height</a>

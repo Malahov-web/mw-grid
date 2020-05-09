@@ -1,4 +1,8 @@
-2.0.3 / 2020-05-06
+2.0.5 / 2020-05-08
+==================
+ * Added Demo: Features - ordering
+
+2.0.4 / 2020-05-06
 ==================
  * Added Demo: Features - vertical-aligment
 
