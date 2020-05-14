@@ -334,3 +334,17 @@
         text-align: inherit;
     }
 }
+
+.section-features-columns-same-height {
+    .demo-rows {
+        .row-flex {
+            & > div {
+                background-color: #987;
+                background: linear-gradient(to right, #5786AD, #1F405B);
+                font-size: 1rem;
+                line-height: 1.5rem;
+                color: #e9e8e7;
+            }
+        }
+    }
+}

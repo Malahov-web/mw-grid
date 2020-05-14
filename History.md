@@ -1,3 +1,7 @@
+2.0.6 / 2020-05-13
+==================
+ * Added Demo: Features - columns-same-height
+
 2.0.5 / 2020-05-08
 ==================
  * Added Demo: Features - ordering
