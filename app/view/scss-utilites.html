@@ -1,0 +1,44 @@
+{% extends "layout/_layout.html" %}
+
+
+{% set page_title = 'SCSS Utilites' %}
+
+
+{% block main %}
+
+    <div class="section-scss-utilites">
+        <div class="row text">
+            <div class="mv_24">
+                <h1>SCSS Utilites</h1>
+
+                <p>Mw-grid SCSS API provides follow functions, which you can use to get some grid parameters. These functions get data from <code class="scss-var">$devices</code> obj.</p>
+
+                <ui>
+                    <li>
+                        <a href="#get-grid-bp"><code class="scss-function">get_grid_bp()</code></a> - get device breakpoint value
+                    </li>
+                    <li>
+                        <a href="#get-grid-c-m"><code class="scss-function">get_grid_c_m()</code></a> - get device container_max value
+                    </li>
+                    <li>
+                        <a href="#get-grid-f-b"><code class="scss-function">get_grid_f_b()</code></a> - get device font_base value
+                    </li>
+                    <li>
+                        <a href="#get-grid-ms-c"><code class="scss-function">get_grid_ms_c()</code></a> - get device ms_coeff (modular scale) coefficient value
+                    </li>
+                </ui>
+
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section-scss-utilites" id="">
+        {% include "blocks/scss-utilites/view/_scss_utilites.html" %}        
+    </div>
+
+
+
+{% endblock %}
+

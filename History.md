@@ -1,3 +1,7 @@
+2.0.7 / 2020-05-15
+==================
+ * Added Demo: scss-utilites
+
 2.0.6 / 2020-05-13
 ==================
  * Added Demo: Features - columns-same-height

@@ -1,0 +1,223 @@
+<!-- Demo -->
+<div class="demo-rows">
+
+    <!--h4>Row collapse</h4>
+
+    <div class="row collapse">
+
+        <div class="mv_12">
+            <div class="demo-block">Row collapse
+
+                <div class="row ">
+                    <div class="mv_12">
+                        <div class="demo-block">mv_12
+                        </div>
+                    </div>
+                    <div class="mv_12">
+                        <div class="demo-block">mv_12
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>     
+    </div-->
+
+
+</div>
+
+
+<div class="row" id="get-grid-bp">
+    <div class="mv_24">
+        <h3>get_grid_bp()</h3>
+    </div>
+</div>
+
+<!-- Code -->
+<div class="row">
+
+    
+    <div class="mv_12">
+        <div class="h4">SCSS source</div>
+        <pre>
+            <code class="css-language">
+// Get grid breakpoint value from $devices
+// @param  {String} $bp_name - breakpoint name
+// @return {Number} - breakpoint value (unitless)
+
+@function get_grid_bp($bp_name) {
+
+    $bp_obj: map-get($devices, $bp_name);
+    $bp_value: map-get($bp_obj, breakpoint);
+
+    @return $bp_value;  
+}
+
+.my-block { 
+    @media (min-width: get_grid_bp('ds_')+px ) {  
+        margin-top: 20px; // some code..
+    }
+}
+            </code>
+        </pre>
+    </div>
+
+    <div class="mv_12">
+        <div class="h4">CSS  compiled</div>
+        <pre>
+            <code class="css-language">
+@media (min-width: 1024px) {
+    .my-block {
+        margin-top: 20px;
+    } 
+}               
+            </code>
+        </pre>
+    </div>
+
+
+</div>
+
+
+<div class="row" id="get-grid-c-m">
+    <div class="mv_24">
+        <h3>get_grid_c_m()</h3>
+    </div>
+</div>
+
+<!-- Code -->
+<div class="row">
+
+    
+    <div class="mv_12">
+        <div class="h4">SCSS source</div>
+        <pre>
+            <code class="css-language">
+// Get grid device container_max value 
+// @param $bp_name {String} $number - breakpoint name
+// @return {Number} - container_max value
+
+@function get_grid_c_m($bp_name) {
+
+    $bp_obj: map-get($devices, $bp_name);
+    $bp_value: map-get($bp_obj, container_max);
+
+    @return $bp_value;  
+}
+
+.my-block {
+    max-width: 1/2 * get_grid_c_m('hd_')+px; // 1/2 * 600
+}
+            </code>
+        </pre>
+    </div>
+
+    <div class="mv_12">
+        <div class="h4">CSS  compiled</div>
+        <pre>
+            <code class="css-language">
+.my-block {
+  max-width: 600px;
+}              
+            </code>
+        </pre>
+    </div>
+
+
+</div>
+
+
+
+<div class="row" id="get-grid-f-b">
+    <div class="mv_24">
+        <h3>get_grid_f_b()</h3>
+    </div>
+</div>
+
+<!-- Code -->
+<div class="row">
+
+    
+    <div class="mv_12">
+        <div class="h4">SCSS source</div>
+        <pre>
+            <code class="css-language">
+// Get grid device font_base value 
+// @param $bp_name {String} $number - breakpoint name
+// @return {Number} - font_base value
+
+@function get_grid_f_b($bp_name) {
+
+    $bp_obj: map-get($devices, $bp_name);
+    $bp_value: map-get($bp_obj, font_base);
+
+    @return $bp_value;  
+}
+
+.my-block {
+    max-width: 1/2 * get_grid_c_m('hd_')+px; // 1/2 * 600
+}
+            </code>
+        </pre>
+    </div>
+
+    <div class="mv_12">
+        <div class="h4">CSS  compiled</div>
+        <pre>
+            <code class="css-language">
+.my-block {
+    font-size: 15px;
+}            
+            </code>
+        </pre>
+    </div>
+
+
+</div>
+
+
+<div class="row" id="get-grid-ms-c">
+    <div class="mv_24">
+        <h3>get_grid_c_m()</h3>
+    </div>
+</div>
+
+<!-- Code -->
+<div class="row">
+
+    
+    <div class="mv_12">
+        <div class="h4">SCSS source</div>
+        <pre>
+            <code class="css-language">
+// Get grid device ms_coeff value 
+// @param $bp_name {String} $number - breakpoint name
+// @return {Number} - ms_coeff value (unitless)
+
+@function get_grid_ms_c($bp_name) {
+
+    $bp_obj: map-get($devices, $bp_name);
+    $bp_value: map-get($bp_obj, ms_coeff);
+
+    @return $bp_value;  
+}
+
+h6 {    
+    font-size: get_grid_f_b('mv_') * get_grid_ms_c('mv_'); // 15 * 1.10
+}
+            </code>
+        </pre>
+    </div>
+
+    <div class="mv_12">
+        <div class="h4">CSS  compiled</div>
+        <pre>
+            <code class="css-language">
+h6 {
+    font-size: 16.5px; 
+}           
+            </code>
+        </pre>
+    </div>
+
+
+</div>

@@ -348,3 +348,40 @@
         }
     }
 }
+
+.my-class {
+    // max-width:  get_grid_c_m('hd_')+px;
+    // padding: get_grid_property('ds_', 'my_prop');
+}
+.my-block {
+    font-size: get_grid_f_b('mv_');
+ 
+    @media (min-width: get_grid_bp('ds_')+px ) {  
+    
+        font-size: get_grid_f_b('ds_');
+        max-width: 1/2 * get_grid_c_m('hd_')+px;
+    }
+}  
+
+.my-block { 
+    @media (min-width: get_grid_bp('ds_')+px ) {  
+        margin-top: 20px; // some code..
+    }
+} 
+
+.my-block {
+    font-size: get_grid_f_b('mv_');
+}
+
+.my-block {
+    max-width: 1/2 * get_grid_c_m('hd_')+px;
+}
+
+$h6: get_grid_f_b('mv_') * get_grid_ms_c('mv_');
+.my-block {
+    line-height: $h6;
+}
+h6 {
+    
+    font-size: get_grid_f_b('mv_') * get_grid_ms_c('mv_');
+}

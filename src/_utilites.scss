@@ -25,7 +25,7 @@
 
 /* 2. get_grid_c_m($bp_name) - return container_max value from $devices */
 
-// Get grid breakpoint value
+// Get grid device container_max value 
 // @param $bp_name {String} $number - breakpoint name
 // @return {Number} - container_max value
 
@@ -40,7 +40,7 @@
 
 /* 3. get_grid_f_b($bp_name) - return font_base value from $devices */
 
-// Get grid breakpoint value
+// Get grid device font_base value 
 // @param $bp_name {String} $number - breakpoint name
 // @return {Number} - font_base value
 
@@ -55,7 +55,7 @@
 
 /* 4. get_grid_ms_c($bp_name) - return ms_coeff value from $devices */
 
-// Get grid breakpoint value
+// Get grid device ms_coeff value 
 // @param $bp_name {String} $number - breakpoint name
 // @return {Number} - ms_coeff value (unitless)
 
@@ -66,3 +66,18 @@
 
     @return $bp_value;  
 }
+
+/*
+
+beta TESTING
+
+@function get_grid_property($bp_name, $propery) {
+
+    $bp_obj: map-get($devices, $bp_name);
+    $propery_value: map-get($bp_obj, $propery);
+
+    @return $propery_value;  
+
+}
+
+*/

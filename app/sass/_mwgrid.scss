@@ -17,7 +17,8 @@ $devices: (
         breakpoint: 320,
         container_max: 300,
         font_base: 15px,
-        ms_coeff: 1.10,
+        ms_coeff: 1.10
+        // my_prop: 123
     ),
     tb_: (
         breakpoint: 768,
@@ -30,5 +31,6 @@ $devices: (
         container_max: 960,
         font_base: 16px,
         ms_coeff: 1.17
+        // my_prop: 345
     )     
 );
