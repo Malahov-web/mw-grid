@@ -1,3 +1,7 @@
+2.0.8 / 2020-05-20
+==================
+ * Update: Reverse - add ".reverse" - alias for ".row-reverse"
+
 2.0.7 / 2020-05-15
 ==================
  * Added Demo: scss-utilites

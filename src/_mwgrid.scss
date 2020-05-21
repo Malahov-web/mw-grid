@@ -140,6 +140,7 @@ Modules have:
 
     .row>div{ float : left; }
 
+    .row.reverse>div,
     .row.row-reverse>div { float: right;  }
 }
 /* Inline-block  model */
@@ -157,8 +158,10 @@ Modules have:
     .row-line.bottom>div{ vertical-align : bottom; }
     .row-line.baseline>div{ vertical-align : baseline; }
 
-    .row-line.row-reverse{ direction : rtl; }
-    .row-line.row-reverse>div{ direction : ltr; }    
+    .row-line.row-reverse,
+    .row-line.reverse { direction : rtl; }
+    .row-line.row-reverse,
+    .row-line.reverse >div{ direction : ltr; }    
 }
 /* Flex  model */
 @if map-get($display_models, flex) == 1 {
@@ -175,7 +178,8 @@ Modules have:
     [class*=row-flex].baseline{ align-items : baseline; }
     [class*=row-flex].stretch{ align-items : stretch; }
 
-    .row-flex.row-reverse{ flex-direction: row-reverse; }
+    .row-flex.row-reverse,
+    .row-flex.reverse { flex-direction: row-reverse; }
 }
 
 
