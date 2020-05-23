@@ -221,3 +221,102 @@ h6 {
 
 
 </div>
+
+
+<div class="row" id="get-grid-property">
+    <div class="mv_24">
+        <h3>get_grid_property()</h3>
+        <p>gets the specified (custom) property value from the grid parameters. You can add your custom parameters to grid and use it in your project files</p>
+    </div>
+</div>
+
+<!-- Code -->
+<div class="row-flex top">
+
+    
+    <div class="mv_12">
+        <div class="h4">SCSS source</div>
+        <pre>
+            <code class="css-language">
+// Get the specified (custom) property value 
+// @param $bp_name {String} - breakpoint name
+// @param $propery {String} - breakpoint name
+// @return {Number} - property value
+
+@function get_grid_property($bp_name, $propery) {
+
+    $bp_obj: map-get($devices, $bp_name);
+    $propery_value: map-get($bp_obj, $propery);
+
+    @return $propery_value; 
+}
+
+
+body {
+    line-height: get_grid_property('mv_', 'line_height');
+    @media (min-width: get_grid_bp('ds_')+px ) {
+        line-height: get_grid_property('ds_', 'line_height')
+    }
+
+}
+            </code>
+        </pre>
+    </div>
+
+    <div class="mv_12">
+        <div class="h4">SCSS source</div>
+        <pre>
+            <code class="css-language">
+/* _mygrid.scss */
+
+$devices: ( 
+    mv_: (
+        breakpoint: 320,
+        container_max: 300,
+        font_base: 15px,
+        ms_coeff: 1.10,
+        line_height: 1.5  // add your custom property
+    ),
+    tb_: (
+        breakpoint: 768,
+        container_max: 750,
+        font_base: 15px,
+        ms_coeff: 1.17,
+    ), 
+    ds_: (
+        breakpoint: 1024,
+        container_max: 960,
+        font_base: 16px,
+        ms_coeff: 1.17,
+        line_height: 1.7  // add your custom property
+    )     
+);
+
+// Import module 
+@import 'node_modules/mw-grid/src/_mwgrid.scss';
+            </code>
+        </pre>
+    </div>  
+
+    <div class="mv_24"></div>
+
+    <div class="mv_12">
+        <div class="h4">CSS compiled</div>
+        <pre>
+            <code class="css-language">
+body {
+    line-height: 1.5;
+}
+@media (min-width: 1024px) {
+    body {
+        line-height: 1.7;
+    }
+}         
+            </code>
+        </pre>
+    </div>
+
+
+
+
+</div>

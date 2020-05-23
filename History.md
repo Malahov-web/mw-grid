@@ -1,3 +1,7 @@
+2.1.0 / 2020-05-22
+==================
+ * Added SCSS Utulites: get_grid_property()
+
 2.0.8 / 2020-05-20
 ==================
  * Update: Reverse - add ".reverse" - alias for ".row-reverse"

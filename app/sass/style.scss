@@ -351,8 +351,16 @@
 
 .my-class {
     // max-width:  get_grid_c_m('hd_')+px;
-    // padding: get_grid_property('ds_', 'my_prop');
+    padding: get_grid_property('ds_', 'my_prop');
+    line-height: get_grid_property('ds_', 'line_height');
 }
+// body {
+//     line-height: get_grid_property('mv_', 'line_height');
+//     @media (min-width: get_grid_bp('ds_')+px ) {
+//         line-height: get_grid_property('ds_', 'line_height')
+//     }
+
+// }
 .my-block {
     font-size: get_grid_f_b('mv_');
  

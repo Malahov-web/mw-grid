@@ -1,6 +1,6 @@
 {
   "name": "mw-grid",
-  "version": "2.0.8",
+  "version": "2.1.0",
   "description": "SCSS modular grid for your html/css project",
   "keywords": "scss layout css grid flexbox",
   "main": "index.js",
