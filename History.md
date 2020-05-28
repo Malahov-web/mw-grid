@@ -1,3 +1,7 @@
+2.2.0 / 2020-05-27
+==================
+ * Added Specific order
+
 2.1.0 / 2020-05-22
 ==================
  * Added SCSS Utulites: get_grid_property()
