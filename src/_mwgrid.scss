@@ -236,6 +236,25 @@ Modules have:
 
         }
 
+        // columns specific order
+        $i: 1;
+        @while $i < ($columns + 1) {
+
+            .#{$device_name}order_#{$i} {
+                order: $i;
+            }
+
+            // .#{$device_name}#{$i} {
+
+            //     $width: $i / $columns;
+            //     width: $width * 100%;
+            // }         
+
+            $i: $i + 1;
+
+        }
+
+
     }
 
     // columns base styles
@@ -244,6 +263,11 @@ Modules have:
     }    
 }
 
+// .mv_order-1
+// .mv_order-2
+// ..
+// .ds_order-1
+// .ds_order-2
 
 
 /* 4. Auxiliary elements (Вспомогательные структурные элементы) */
