@@ -282,6 +282,13 @@
     color: #e9e8e7;
 }
 
+.bg-green {
+    background: linear-gradient(to right, $color_add_green_3, $color_add_green);
+}
+.bg-purple {
+    background: linear-gradient(to right, $color_purple_3, $color_purple); 
+}
+
 .section-columns-offsets,
 .ssection-features-vertical-alignment {
     .demo-rows {

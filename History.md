@@ -1,3 +1,7 @@
+2.2.1 / 2020-05-29
+==================
+ * Added Demo: Features - specific order
+
 2.2.0 / 2020-05-27
 ==================
  * Added Specific order

@@ -593,11 +593,11 @@
             </div>          
         </div>
         <div class="ds_8">
-            <div class="demo-inline-block">Second column
+            <div class="demo-inline-block bg-green">Second column
             </div>              
         </div>
         <div class="ds_8">
-            <div class="demo-inline-block">Third column
+            <div class="demo-inline-block bg-purple">Third column
             </div>              
         </div>
     </div>
@@ -610,17 +610,17 @@
     <div class="mv_24">
         <pre>
             <code class="html-language">
-    &lt;div class="row-flex  reverse&gt;
+    &lt;div class="row-line  reverse"&gt;
         &lt;div class="ds_8"&gt;
             &lt;div class="demo-inline-block"&gt;First column
             &lt;/div&gt;          
         &lt;/div&gt;
         &lt;div class="ds_8"&gt;
-            &lt;div class="demo-inline-block"&gt;Second column
+            &lt;div class="demo-inline-block bg-green"&gt;Second column
             &lt;/div&gt;              
         &lt;/div&gt;
         &lt;div class="ds_8"&gt;
-            &lt;div class="demo-inline-block"&gt;Third column
+            &lt;div class="demo-inline-block bg-purple"&gt;Third column
             &lt;/div&gt;              
         &lt;/div&gt;
     &lt;/div&gt;
@@ -705,7 +705,17 @@
 
     <div class="ds_24">
         <h2>Specific order</h2>
-        <p>Documentation in progress (see classes "*order*" in compiled css styles)</p>
+
+        <p>To set specific columns order we have "order" css-classes, add the key word "order" and number - number of the column in row, like  <code class="css-class">".ds_order_2"</code>
+        </p>
+        <p>By default the max number of order number is equal to the number of grid columns.</p>
+
+        <ul>
+            <li>Order number is real element number in CSS </li>
+            <li>Use <code class="css-property">order</code></li>
+            <li>Specific order is responsive (".mv_order_3.ds_order_2") up from breakpoints</li>
+            <li>Supports by flex model only</li>
+        </ul>
 
     </div>
 
@@ -713,43 +723,45 @@
 
 
 <!-- Demo -->
-<!--div class="demo-rows">
+<div class="demo-rows">
 
 
-    <div class="row-line  reverse">
-        <div class="ds_8">
-            <div class="demo-inline-block">First column
+    <div class="row-flex ">
+
+        <div class="mv_24 ds_8 mv_order_1 ds_order_2">
+            <div class="demo-inline-block">Subscribe form
             </div>          
         </div>
-        <div class="ds_8">
-            <div class="demo-inline-block">Second column
+        <div class="mv_24 ds_8 mv_order_2 ds_order_1">
+            <div class="demo-inline-block bg-green">Menu
             </div>              
         </div>
-        <div class="ds_8">
-            <div class="demo-inline-block">Third column
+        <div class="mv_24 ds_8 mv_order_3 ds_order_3">
+            <div class="demo-inline-block bg-purple">Copyrights
             </div>              
         </div>
     </div>
 
 
-</div-->
+</div>
 
 <!-- Code -->
-<!--div class="row">
+<div class="row">
     <div class="mv_24">
         <pre>
             <code class="html-language">
-    &lt;div class="row-flex  reverse&gt;
-        &lt;div class="ds_8"&gt;
-            &lt;div class="demo-inline-block"&gt;First column
+    &lt;div class="row-flex "&gt;
+
+        &lt;div class="mv_24 ds_8 mv_order_1 ds_order_2"&gt;
+            &lt;div class="demo-inline-block"&gt;Subscribe form
             &lt;/div&gt;          
         &lt;/div&gt;
-        &lt;div class="ds_8"&gt;
-            &lt;div class="demo-inline-block"&gt;Second column
+        &lt;div class="mv_24 ds_8 mv_order_2 ds_order_1"&gt;
+            &lt;div class="demo-inline-block bg-green"&gt;Menu
             &lt;/div&gt;              
         &lt;/div&gt;
-        &lt;div class="ds_8"&gt;
-            &lt;div class="demo-inline-block"&gt;Third column
+        &lt;div class="mv_24 ds_8 mv_order_3 ds_order_3"&gt;
+            &lt;div class="demo-inline-block bg-purple"&gt;Copyrights
             &lt;/div&gt;              
         &lt;/div&gt;
     &lt;/div&gt;
@@ -757,7 +769,7 @@
         </pre>
     </div>
  
-</div-->
+</div>
 
 
         
