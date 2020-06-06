@@ -1,3 +1,7 @@
+2.2.2 / 2020-06-06
+==================
+ * Update Demo - update page: menu-top, sidebar
+
 2.2.1 / 2020-05-29
 ==================
  * Added Demo: Features - specific order

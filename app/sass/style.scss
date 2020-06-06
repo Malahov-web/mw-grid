@@ -39,6 +39,23 @@
 
 */
 
+.container--main {
+    @media (min-width: get_grid_bp('ds_')+px) {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+
+
+        // .main {
+
+        // }
+        .sidebar {
+            margin-right: 40px;
+        }
+
+    }
+}
+
 
 .main {
  // background: $accent;
@@ -67,8 +84,8 @@
 // background: $grey;
     // @extend .section__block;
 
-    position: sticky; /* Липкое позиционирование */
-    top: 0; /* Положение сверху */
+    // position: sticky; /* Липкое позиционирование */
+    // top: 0; /* Положение сверху */
 
     @include h_rhytm('column', $fb);
     float: left;
@@ -206,8 +223,15 @@
 }
 
 
+// When made sidebar like fullheight column
+.sidebar .menu-outer {
+// .menu-side-outer {
+// .menu-side {
+    position: sticky;
+    top: 0;
+}
 
-.menu-side{
+.menu-side { 
     @include flex(flex-start, flex-start);
     flex-direction: column;
     // margin: 0  0.5em;
