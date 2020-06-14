@@ -7,7 +7,9 @@
 * 5. Collapse 
 * 6. Responsive utilites
 * 7. Text utulites
-* 8. SCSS utulites (functions)
+* 8. SCSS utulites
+*   8.1 Functions
+*   8.1 Mixins
 */
 
 /* Options: */
@@ -103,6 +105,8 @@ $devices: map-merge(
     $devices
 );
 
+$devices-names: map-keys($devices);
+@debug $devices-names;
 
 /* 1. Structure elements */
 
@@ -393,5 +397,10 @@ Modules have:
 }
 
 
-/* 8. SCSS Utulites (functions)  */
+/* 8. SCSS Utulites  */
+
+/* 8.1 Functions  */
 @import 'utilites'; //
+
+/* 8.2 Mixins  */
+@import 'mixins'; //

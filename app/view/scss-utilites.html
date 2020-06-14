@@ -6,10 +6,52 @@
 
 {% block main %}
 
-    <div class="section-scss-utilites">
+
+    <div class="section-scss-utilites" id="mixins">
+
         <div class="row text">
             <div class="mv_24">
                 <h1>SCSS Utilites</h1>
+
+                <p>Mw-grid SCSS API provides follow functions, which you can use to get some grid parameters. These functions get data from <code class="scss-var">$devices</code> obj.</p>
+
+                <p></p>
+            </div>
+        </div>
+
+        <div class="row text"  id="mixins">
+            <div class="mv_24">
+                <h2>Mixins</h2>
+
+                <p>Mw-grid SCSS API provides follow mixins for write <code class="css-directive">@media()</code> expressions </p>
+
+                <ul>
+                    <li>
+                        <a href="#media-up"><code class="scss-mixins">media-up()</code></a> - output @media expression (min-width)
+                    </li>
+                    <li>
+                        <a href="#media-down"><code class="scss-mixins">media-down()</code></a> - output @media expression (max-width)
+                    </li>
+                    <li>
+                        <a href="#media-only"><code class="scss-mixins">media-only()</code></a> - output @media expression (min-width) and (max-width)
+                    </li>
+  
+                </ul>
+
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-scss-utilites" id="">
+        {% include "blocks/scss-utilites/view/_scss_mixins.html" %}        
+    </div>
+
+
+    <div class="section-scss-utilites"  id="functions">
+        <div class="row text">
+            <div class="mv_24">
+                <h2>Functions</h2>
 
                 <p>Mw-grid SCSS API provides follow functions, which you can use to get some grid parameters. These functions get data from <code class="scss-var">$devices</code> obj.</p>
 

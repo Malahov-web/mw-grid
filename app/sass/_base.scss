@@ -171,6 +171,15 @@ code.css-property {
     color: lightblue;
     color: steelblue;
 }
+code.css-directive {
+    background: none;
+    color: firebrick; 
+}
+code.css-mixins {
+    background: none;
+    color: limegreen; 
+    // color: seagreen; 
+}
 code.scss-var {
     color: darkcyan; 
 }

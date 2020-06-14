@@ -171,6 +171,7 @@
             margin: 0  1em;
             line-height: $l_h;
             color: $grey_super_light;
+            font-weight: 400;
 
             &:hover{
                 color: $secondary;
@@ -423,4 +424,88 @@ $h6: get_grid_f_b('mv_') * get_grid_ms_c('mv_');
 h6 {
     
     font-size: get_grid_f_b('mv_') * get_grid_ms_c('mv_');
+}
+
+
+// .media-up(hd_) {
+//     // code..
+// }
+
+.my-test-block {
+
+    @include media-up(ds_) {
+        width: 50%;
+        background-color: #999;
+    };   
+}
+
+.my-test-block {
+
+    @include media-down(tb_) {
+        width: 100%;
+        background-color: dakrblue;
+    };   
+}
+
+.my-test-block {
+
+    @include media-only(tb_) {
+        background-color: lightgreen;
+    };
+}
+
+
+.media-block {
+
+    height: 100px;
+    background-color: #ccc;
+
+    @include media-up(ds_) {
+
+        width: 50%;
+        background-color: #999;
+    };
+
+    @include media-up('hd_') {
+
+        width: 100%;
+        background-color: #555;
+    };
+
+    @include media-down(tb_) {
+        padding: 1em;
+        background-color: dakrblue;
+    };  
+
+    // @include media-only(tb_) {
+    //     background-color: lightgreen;
+    // };  
+
+}
+
+
+// $textmap: ( 
+//   'foo1': 11,
+//   'foo2': 22,
+//   'foo3': 33
+// );
+
+// div.text-list-or-map {
+//     content:nth(map-keys($textmap), 2);
+//     // z-index:nth(map-values($map), 2);
+//     z-index:nth($textmap, 2);
+
+//     // width: nth();
+// }
+// @debug index(1px solid red, red); // 1
+
+
+
+.media-inline {
+
+
+    @include media-only(ds_) {
+        background-color: lightgreen;
+    };  
+
 }

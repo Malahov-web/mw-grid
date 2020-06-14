@@ -231,10 +231,235 @@
 
                 
 
-    <div class="section-scss-utilites">
+
+    <div class="section-scss-utilites" id="mixins">
+
         <div class="row text">
             <div class="mv_24">
                 <h1>SCSS Utilites</h1>
+
+                <p>Mw-grid SCSS API provides follow functions, which you can use to get some grid parameters. These functions get data from <code class="scss-var">$devices</code> obj.</p>
+
+                <p></p>
+            </div>
+        </div>
+
+        <div class="row text"  id="mixins">
+            <div class="mv_24">
+                <h2>Mixins</h2>
+
+                <p>Mw-grid SCSS API provides follow mixins for write <code class="css-directive">@media()</code> expressions </p>
+
+                <ul>
+                    <li>
+                        <a href="#media-up"><code class="scss-mixins">media-up()</code></a> - output @media expression (min-width)
+                    </li>
+                    <li>
+                        <a href="#media-down"><code class="scss-mixins">media-down()</code></a> - output @media expression (max-width)
+                    </li>
+                    <li>
+                        <a href="#media-only"><code class="scss-mixins">media-only()</code></a> - output @media expression (min-width) and (max-width)
+                    </li>
+  
+                </ul>
+
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-scss-utilites" id="">
+        <!-- Demo -->
+<div class="demo-rows">
+
+
+</div>
+
+
+<div class="row" id="media-up">
+    <div class="mv_24">
+        <h3>media-up()</h3>
+        <p>output @media expression up from breakpoint (min-width)</p>
+    </div>
+</div>
+
+<!-- Code -->
+<div class="row">
+
+    
+    <div class="mv_12">
+        <div class="h4">SCSS source</div>
+        <pre>
+            <code class="css-language">
+/* 1.  media-up($bp_name) - output @media expression up from breakpoint (min-width) */
+// 
+// @param  {String} $bp_name - breakpoint name
+// @return {CSS expression} - @media expression
+
+@mixin media-up($bp_name) {
+
+    @media (min-width:  get_grid_bp($bp_name)+px) {
+        @content;
+    }     
+}
+
+.my-test-block {
+
+    @include media-up(ds_) {
+        width: 50%;
+        background-color: #999;
+    };   
+}
+            </code>
+        </pre>
+    </div>
+
+    <div class="mv_12">
+        <div class="h4">CSS compiled</div>
+        <pre>
+            <code class="css-language">
+@media (min-width: 1024px) {
+    .my-test-block {
+        width: 50%;
+        background-color: #999;
+    }
+}
+            </code>
+        </pre>
+    </div>
+
+
+</div>
+
+
+<div class="row" id="media-down">
+    <div class="mv_24">
+        <h3>media-down()</h3>
+        <p>output @media expression down from breakpoint (max-width)</p>
+    </div>
+</div>
+
+<!-- Code -->
+<div class="row">
+
+    
+    <div class="mv_12">
+        <div class="h4">SCSS source</div>
+        <pre>
+            <code class="css-language">
+/* 2.  media-down($bp_name) - output @media expression down from breakpoint (max-width) */
+// 
+// @param  {String} $bp_name - breakpoint name
+// @return {CSS expression} - @media expression
+
+@mixin media-down($bp_name) {
+
+    @media (max-width:  get_grid_bp($bp_name)-1px) {
+        @content;
+    }     
+}
+
+.my-test-block {
+
+    @include media-down(tb_) {
+        width: 100%;
+        background-color: dakrblue;
+    };   
+}
+            </code>
+        </pre>
+    </div>
+
+    <div class="mv_12">
+        <div class="h4">CSS compiled</div>
+        <pre>
+            <code class="css-language">
+@media (max-width: 767px) {
+    .my-test-block {
+        width: 100%;
+        background-color: dakrblue;
+    }
+}            
+            </code>
+        </pre>
+    </div>
+
+
+</div>
+
+
+
+<div class="row" id="media-only">
+    <div class="mv_24">
+        <h3>media-only()</h3>
+        <p>output @media expression up from breakpoint to the next breakpoint  (min-width) and (max-width)</p>
+    </div>
+</div>
+
+<!-- Code -->
+<div class="row">
+
+    
+    <div class="mv_12">
+        <div class="h4">SCSS source</div>
+        <pre>
+            <code class="css-language">
+/* 3.  media-only($bp_name) - output @media expression up from breakpoint to the next breakpoint  (min-width) and (max-width) */
+// 
+// @param  {String} $bp_name - breakpoint name
+// @return {CSS expression} - @media expression
+
+@mixin media-only($bp_name) {
+
+    $bp_index: index(map-keys($devices), $bp_name); //+ 
+
+    @if ( $bp_index >=length($devices-names)) {
+        @media (min-width: get_grid_bp($bp_name)+px) {
+            @content;
+        }
+    }
+    @else {
+        $next_bp_name: nth($devices-names, $bp_index+1);
+        @media (min-width: get_grid_bp($bp_name)+px) and (max-width: get_grid_bp($next_bp_name)-1px) {
+            @content;
+        }
+    }
+}
+
+.my-test-block {
+
+    @include media-only(tb_) {
+        background-color: lightgreen;
+    };
+}
+            </code>
+        </pre>
+    </div>
+
+    <div class="mv_12">
+        <div class="h4">CSS compiled</div>
+        <pre>
+            <code class="css-language">
+@media (min-width: 768px) and (max-width: 1023px) {
+    .my-test-block {
+        background-color: lightgreen;
+    }
+}         
+            </code>
+        </pre>
+    </div>
+
+
+</div>
+
+        
+    </div>
+
+
+    <div class="section-scss-utilites"  id="functions">
+        <div class="row text">
+            <div class="mv_24">
+                <h2>Functions</h2>
 
                 <p>Mw-grid SCSS API provides follow functions, which you can use to get some grid parameters. These functions get data from <code class="scss-var">$devices</code> obj.</p>
 
@@ -799,6 +1024,8 @@ body {
 
     
     
+        
+    
 
         
     
@@ -808,9 +1035,20 @@ body {
     
     
 
-    <li class="menu-main__item  active ">
+    <li class="menu-main__item menu-item-has-children active ">
         <a href="scss-utilites.html" class="menu-main__item-link">SCSS Utilites</a>
 
+        
+            <!-- <i class="material-icons">keyboard_arrow_down</i> -->
+            <ul class="submenu">
+                
+                <li>
+                    <a href="#mixins">Mixins</a>
+                </li>
+                <li>
+                    <a href="#functions">Functions</a>
+                </li>
+            </ul>
         
 
     </li>

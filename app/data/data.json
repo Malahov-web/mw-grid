@@ -260,7 +260,17 @@
         },
         {
             "item-name": "SCSS Utilites",
-            "item-link": "scss-utilites"
+            "item-link": "scss-utilites",
+            "submenu" : [
+                {
+                    "item-name" : "Mixins",
+                    "item-link": "#mixins"
+                },
+                {
+                    "item-name" : "Functions",
+                    "item-link": "#functions"
+                }
+            ]
         }
     ],
 
