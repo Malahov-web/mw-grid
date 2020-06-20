@@ -245,15 +245,137 @@
 
     <div class="section-overview" id="overview">
                         
-
 <!-- Doc  -->
 <div class="row text">
 
     <div class="ds_24">
+        <h2>SCSS API</h2>
+        <p>You have simple and usable API to set your custom grid parameters.</p>
+
+        <!--ul>
+            <li>
+                <code class="scss-var">$columns</code> - columns number, int, unitless, default: 12
+            </li>
+            <li>
+                <code class="scss-var">$columns_gap</code> - column one side gap, int, unitless, default: 15
+            </li>
+            <li>
+                <code class="scss-var">$container_width</code> - container global max width, int, unitless, default: 1400
+            </li>
+            <li>
+                <code class="scss-var">$breakpoints_between</code> - behavior between breakpoints
+            </li>
+
+            <li>
+                <a href="#media-down"><code class="scss-mixins">media-down()</code></a> - output @media expression (max-width)
+            </li>
+
+
+        </ul-->
+
+
+        <table class="table--overview">
+<!--             <tr>
+                <th></th> <th>Block</th><th>Inline-Block</th><th>Flex</th>
+            </tr> -->
+            <tr>
+                <th>Var</th> <th>Type</th><th>Default</th><th>Description</th>
+            </tr>  
+
+            <tr>
+                <td colspan="4">
+                    Vars
+                    <!-- <hr> -->
+                </td>
+            </tr>
+            <tr>
+                <td><code class="scss-var">$columns</code></td>
+                <td>int, unitless</td>
+                <td>15</td>
+                <td>columns number</td>
+            </tr>
+
+            <tr>
+                <td><code class="scss-var">$columns_gap</code></td>
+                <td>int, unitless</td>
+                <td>12</td>
+                <td>column one side gap</td>
+            </tr>  
+
+            <tr>
+                <td><code class="scss-var">$container_width</code></td>
+                <td>int, unitless</td>
+                <td>1400</td>
+                <td>container global max width</td>
+            </tr>
+
+            <tr>
+                <td><code class="scss-var">$breakpoints_between</code></td>
+                <td>string,
+                    <br>['responsive' || 'fixed']</td>
+                <td>'responsive'</td>
+                <td>behavior between breakpoints</td>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    Objects
+                    <!-- <hr> -->
+                </td>
+            </tr>
+            <tr>
+                <td><code class="scss-var">$display_models</code></td>
+                <td>map</td>
+                <td>(block: 1, inline-block: 0, flex: 1))</td>
+                <td>types of display models</td>
+            </tr>
+            <tr>
+                <td><code class="scss-var">$devices</code></td>
+                <td>map</td>
+                <td>see <a href="#example">Expamle</a></td>
+                <td>devices parameters - breakpoints, container max width, font base, and modular scale coeff for each device</td>
+            </tr>
+
+            <!--tr>
+                <td>Display</td>
+                <td><code class="css-property">block</code></td>
+                <td><code class="css-property">inline-block</code></td>
+                <td><code class="css-property">flex</code></td>
+            </tr>
+            <tr>
+                <td>CSS-class</td>
+                <td><code class="css-class">".row"</code></td>
+                <td><code class="css-class">".row-line"</code></td>
+                <td><code class="css-class">".row-flex"</code></td>
+            </tr>                    
+            <tr>
+                <td>Reverse</td>
+                <td><i class="icon-status-yes">✔</i></td>
+                <td><i class="icon-status-yes">✔</i></td>
+                <td><i class="icon-status-yes">✔</i></td>
+            </tr-->
+  
+
+        </table>        
+    </div>
+
+    <!-- <div class="media-block">123</div> -->
+
+</div>
+
+
+
+<!-- Doc  -->
+<div class="row text" id="example">
+
+    
+    <div class="ds_24">
+        <br>
+        <h2>Example</h2>        
         <p>In your SCSS style add options and include mw-grid core, like this:</p>
     </div>
 
-    <div class="media-block">123</div>
+    <!-- <div class="media-block">123</div> -->
 
 </div>
 
@@ -264,7 +386,7 @@
         <pre>
             <code class="scss-language">
 // Options: 
-$columns: 24;
+$columns: 12;
 $columns_gap: 10;
 $container_width: 1200;
 $breakpoints_between: 'responsive'; // 'responsive' || 'fixed' 

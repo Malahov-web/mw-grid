@@ -1,3 +1,7 @@
+2.3.1 / 2020-06-20
+==================
+ * Update Demo: Overview - add SCSS API
+
 2.3.0 / 2020-06-13
 ==================
  * Added CSS Utulites: mixins - media-up(), media-down(), ()media-only()
