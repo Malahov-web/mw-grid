@@ -1,3 +1,8 @@
+2.3.2 / 2020-06-27
+==================
+ * Update Demo: Structure elements
+ * Update Demo - update page: footer
+
 2.3.1 / 2020-06-20
 ==================
  * Update Demo: Overview - add SCSS API

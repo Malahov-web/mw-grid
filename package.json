@@ -1,6 +1,6 @@
 {
   "name": "mw-grid",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "SCSS modular grid for your html/css project",
   "keywords": "scss layout css grid flexbox",
   "main": "index.js",
@@ -51,7 +51,7 @@
     "use:gitReadme": "mv 'README.md' 'npm.README.md' && mv 'git.README.md' 'README.md'"
   },
   "author": "Kirill Malakhov",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:Malahov-web/mw-grid.git"

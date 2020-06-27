@@ -62,6 +62,7 @@
     @include h_rhytm('column', $fb);
     float: right;
     width: 100%;
+    margin-bottom: 2*$l_h_base;
 
     @media (min-width: get_grid_bp('ds_')+px) {
         width: calc(100% - #{$sidebar_width}px - #{$sidebar_offset});
@@ -222,6 +223,28 @@
         height: 100vh;
     }
 }
+
+
+/* 3. Footer
+ * **********************************************************************
+ *
+*/ 
+
+.footer {
+    background-color: $grey_light;
+    padding: 1.5*$l_h_base 0;
+    // color: $text;
+    color: #555;
+
+    a {
+        color: $accent;
+        font-weight: 400;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
 
 
 // When made sidebar like fullheight column
