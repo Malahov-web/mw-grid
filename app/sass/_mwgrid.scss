@@ -1,9 +1,10 @@
 // Options: 
 $columns: 24;
 // $columns_gap: 15;
-$columns_gap: 10;
+$columns_gap: 15;
 $container_width: 1200;
 $breakpoints_between: 'responsive'; // 'responsive' || 'fixed' 
+// $breakpoints_between: 'fixed'; // 'responsive' || 'fixed' 
  
 
 $display_models: ( 
@@ -14,6 +15,7 @@ $display_models: (
 
 $devices: ( 
     mv_: (
+        // columns_gap: 11,
         breakpoint: 320,
         container_max: 300,
         font_base: 15px,
@@ -22,12 +24,14 @@ $devices: (
         line_height: 1.5
     ),
     tb_: (
+        // columns_gap: 16,
         breakpoint: 768,
         container_max: 750,
         font_base: 15px,
         ms_coeff: 1.17,
     ), 
     ds_: (
+        // columns_gap: 21,
         breakpoint: 1024,
         container_max: 960,
         font_base: 16px,

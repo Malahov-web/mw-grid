@@ -1,3 +1,7 @@
+2.4.1 / 2020-08-15
+==================
+ * Update devices: add columns gap support
+
 2.3.3 / 2020-07-29
 ==================
  * Update Demo: fix texts Overview, Display Models

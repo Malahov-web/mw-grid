@@ -1,6 +1,9 @@
 # mw-grid
 Powerfull and lightweight CSS layout framework for creating your layout like 'container/row/column' support block, inline-block and flexbox models.
 
+`New in current version!` 
+> Update devices: add columns gap support (see demo Overview) 
+
 `Attention!` 
 > Since version 1.3.0 i added new default breakpoints. Now breakpoints such as in the example below  
 > Versions 1.3.0-1.3.3 are deprecated now  

@@ -6,7 +6,7 @@
         <h2>SCSS API</h2>
         <p>You have simple and usable API to set your custom grid parameters.</p>
 
-        <!--ul>
+        <!-- <ul>
             <li>
                 <code class="scss-var">$columns</code> - columns number, int, unitless, default: 12
             </li>
@@ -24,12 +24,11 @@
                 <a href="#media-down"><code class="scss-mixins">media-down()</code></a> - output @media expression (max-width)
             </li>
 
-
-        </ul-->
+        </ul> -->
 
 
         <table class="table--overview">
-<!--             <tr>
+            <!--             <tr>
                 <th></th> <th>Block</th><th>Inline-Block</th><th>Flex</th>
             </tr> -->
             <tr>
@@ -110,7 +109,33 @@
             </tr-->
   
 
-        </table>        
+        </table>   
+
+        <br>
+        <h3>Variables</h3>
+        <!-- <ul> -->
+            <!-- <li> -->
+                <br>
+                <h4>$columns</h4>
+                <p>columns is global var. Sets the number of columns in grid.</p>
+                <!-- <code class="scss-var">$columns</code> - columns number, int, unitless, default: 12 -->
+            <!-- </li> -->
+            <!-- <li> -->
+
+                <br>
+                <h4>$columns_gap</h4>
+                <p>columns_gap is global var. Sets the padding between columns.</p>
+                <ul>
+                    <li>Value is column one side gap</li>
+                    <li>Use CSS-poperty <code class="css-property">padding-left</code>, <code class="css-property">padding-right</code> for containers and columns and <code class="css-property">margin-left</code>, <code class="css-property">margin-right</code> for rows</li>
+                    <li>Replaced when the 'columns_gap' property is defined on the <code class="scss-var">$device</code> object</li>
+                </ul>
+
+                <!-- <code class="scss-var">$columns_gap</code> - column one side gap, int, unitless, default: 15 -->
+            <!-- </li> -->
+
+
+        <!-- </ul> -->
     </div>
 
     <!-- <div class="media-block">123</div> -->

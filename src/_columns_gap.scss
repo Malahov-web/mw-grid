@@ -1,0 +1,46 @@
+
+
+// Name name
+// Desc
+// Return
+@function get_columns_gap() {
+    // @warn 'warn me';
+
+
+    @return false;
+}
+
+@each $device_name, $device_obj in $devices {
+
+
+    @media (min-width : #{map-get($device_obj, breakpoint)}px) {
+
+        // $result_columns_gap: -1;
+        $result_columns_gap: $columns_gap;
+        $cg_from_devices: map-get($device_obj, columns_gap);
+        @if ( $cg_from_devices  ) { // false
+            $result_columns_gap : $cg_from_devices;
+        }
+
+        .container {
+            padding-left: $result_columns_gap+px;
+            padding-right: $result_columns_gap+px;
+        }
+        .row,
+        .row-line,
+        .row-flex {
+            margin-left: -$result_columns_gap+px;
+            margin-right: -$result_columns_gap+px;
+        }
+
+        @each $devices-name in $devices-names {
+            [class*="#{$devices-name}"] {
+            
+                padding-left: $result_columns_gap+px;
+                padding-right: $result_columns_gap+px;
+            }  
+        }
+
+    }
+
+}

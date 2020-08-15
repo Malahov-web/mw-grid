@@ -321,7 +321,7 @@ const js_jquery =  'node_modules/jquery/dist/jquery.min.js';
 gulp.task('watch',  function() {
     // gulp.watch('app/sass/**/*.+(scss|scss)', [ 'scss']);     
     // gulp.watch('app/sass/**/*.+(scss|scss)', gulp.parallel('scss'));  
-    gulp.watch(['app/sass/**/*.+(scss|scss)', path_view_styles], gulp.parallel('scss')); 
+    gulp.watch(['app/sass/**/*.+(scss|scss)', path_view_styles, 'src/*.scss'], gulp.parallel('scss')); 
     gulp.watch(['app/view/**/*.html', 'app/data/**/*.json'], gulp.parallel('nunjucksRender'));        
     gulp.watch(['app/js/*.js', path_view_js], gulp.parallel('js'));     
 });

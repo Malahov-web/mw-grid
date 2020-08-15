@@ -12,6 +12,23 @@
 *   8.1 Mixins
 */
 
+// TODO
+/*
+Add $columns gap in devices for each device,
+in all slectors where using $columns_gap use column gap from devices
+in default $devices add global $columns_gap
+*/
+// Problems:
+
+// 1) padding-left:  map-get($device_obj, columns_gap)+px; // Error: Invalid null operation: "null plus "px"".
+// = Р.: использовать синтаксис  padding-left:   #{map-get($device_obj, columns_gap)}px;
+
+// 2) In user custom settings /sass/_mwgrid.scss - we erase (destroy) default columns_gap in devices
+// ? В.: добавить columns gap к $devices после определения $devices
+
+
+
+
 /* Options: */
 $columns: 12 !default;  // columns number
 $columns_gap: 15 !default;  // column one side gap
@@ -108,6 +125,10 @@ $devices: map-merge(
 $devices-names: map-keys($devices);
 @debug $devices-names;
 
+
+// 0.1 Add columns gap with backward compability
+@import '_columns_gap'; //
+
 /* 1. Structure elements */
 
 .section{
@@ -115,8 +136,8 @@ $devices-names: map-keys($devices);
 }
 .container{    
     max-width: $container_width+px;
-    padding-left: $columns_gap+px;
-    padding-right: $columns_gap+px;
+    // padding-left: $columns_gap+px;
+    // padding-right: $columns_gap+px;
     margin: 0 auto; 
     box-sizing: border-box;    
     position: relative;
@@ -138,8 +159,8 @@ Modules have:
 /* Block  model */
 @if map-get($display_models, block) == 1 {
     .row{
-        margin-left: -$columns_gap+px;
-        margin-right: -$columns_gap+px;
+        // margin-left: -$columns_gap+px;
+        // margin-right: -$columns_gap+px;
     }
 
     .row>div{ float : left; }
@@ -150,8 +171,8 @@ Modules have:
 /* Inline-block  model */
 @if map-get($display_models, inline-block) == 1 {
     .row-line{
-        margin-left: -$columns_gap+px;
-        margin-right: -$columns_gap+px; 
+        // margin-left: -$columns_gap+px;
+        // margin-right: -$columns_gap+px; 
         font-size: 0;
     }
 
@@ -171,11 +192,15 @@ Modules have:
 @if map-get($display_models, flex) == 1 {
     .row-flex{
         display: flex; flex-wrap: wrap;
-        margin-left: -$columns_gap+px;
-        margin-right: -$columns_gap+px;    
+        // margin-left: -$columns_gap+px;
+        // margin-right: -$columns_gap+px;    
     }
 
-    .row-flexbox{ display : flex; margin-left: -$columns_gap+px; margin-right: -$columns_gap+px; } 
+    .row-flexbox{ 
+        display : flex; 
+        // margin-left: -$columns_gap+px; 
+        // margin-right: -$columns_gap+px; 
+    } 
     [class*=row-flex].middle{ align-items : center; }
     [class*=row-flex].top{ align-items : flex-start; }
     [class*=row-flex].bottom{ align-items : flex-end; }
@@ -197,8 +222,8 @@ Modules have:
 %column_{
 
     box-sizing: border-box; 
-    padding-left: $columns_gap+px;
-    padding-right: $columns_gap+px;
+    // padding-left: $columns_gap+px;
+    // padding-right: $columns_gap+px;
     position : relative; 
     min-height: 1px;
 }
@@ -207,6 +232,25 @@ Modules have:
 
     // columns width and offsets
     @media (min-width : #{map-get($device_obj, breakpoint)}px) {
+
+        // columns gap
+        .container{
+            // padding-left: get_grid_property($device_name, columns_gap );
+            // 
+            // padding-left:  map-get($device_obj, columns_gap)+px; // Error: Invalid null operation: "null plus "px"".
+
+            // padding-left:  map-get($device_obj, columns_gap)px; // 20 px
+
+            // padding-left:  map-get($device_obj, columns_gap)+0px; // Error: Invalid null operation: ...
+
+            // padding-left:  map-get($device_obj, 'columns_gap')+px; // Error: Invalid null operation: ...
+
+            // padding-left:   #{map-get($device_obj, columns_gap)}px; // +
+            // padding-right:  #{map-get($device_obj, columns_gap)}px; // +
+
+            // padding-right: map-get($device_obj, container_max)+px; // + Почему здесь вывоид, а там нет
+            // padding-right: sdf;
+        }        
 
         // between points : Container max-width
         @if $breakpoints_between == 'fixed' {
