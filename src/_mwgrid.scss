@@ -167,6 +167,8 @@ Modules have:
 
     .row.reverse>div,
     .row.row-reverse>div { float: right;  }
+
+
 }
 /* Inline-block  model */
 @if map-get($display_models, inline-block) == 1 {
@@ -448,3 +450,22 @@ Modules have:
 
 /* 8.2 Mixins  */
 @import 'mixins'; //
+
+
+/* 9 Beta test*/
+@import 'beta_test'; //
+// Beta test
+// если есть место -  будет центрироваться, 
+// если нет - будет разместившись по-центру наезжать на колонку, и а контент будет съезжать вниз
+.row {
+    .self-centered {
+        float: none;
+        margin: 0 auto;
+    }
+}
+// будет центрироваться в пространстве оставленном другими колонками
+.row-flex {
+    .self-centered {
+        margin: 0 auto;
+    }
+}

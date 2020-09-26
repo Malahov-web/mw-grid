@@ -1,13 +1,22 @@
 @charset 'utf-8';
 
 /*
+ * Project: mw-grid
+ * Description: Powerfull and lightweight CSS layout framework
+ * Homepage: https://github.com/Malahov-web/mw-grid
+ * Author: Kirill Malahov
+ * Author URI: http://malahov-web.com
+ */
+
+/*
  * Table of contents   Содержание
  *
  *  0. General Vars, Mixins, Extends
  *  1. Header
- *  2. Menu main
- *  3. Slider
- *  4. 
+ *  2. menu-top
+ *  3. 
+ *  4. Footer
+ *  5. menu-side
 
  *  14.
  *
@@ -36,7 +45,6 @@
 /* 0. General Vars, Mixins, Extends
  *
  *
-
 */
 
 .container--main {
@@ -157,57 +165,16 @@
 } /* media end */
 
 
-.menu-top{
-    @include flex(flex-start, center);
-    margin: 0  0.5em;
-}
-    .menu-top li{
-        
-        
-        &:last-child{
-            margin-right: 0;
-        }
-        a{
-            display: block;
-            margin: 0  1em;
-            line-height: $l_h;
-            color: $grey_super_light;
-            font-weight: 400;
-
-            &:hover{
-                color: $secondary;
-            }
-        }
-    }
 
 
 
-/* 2. Menu main
+/* 2. Menu top
  * **********************************************************************
  *
 */  
 
-.menu-main-outer{
-}
-.menu-control{
-    display: none;
-}
-.menu-main{
-}
-    .menu-main li{
-        // display: inline-block;
-        
-        &:last-child{
-            // margin-right: 0;
-        }
-        a{
-            // display: block;
+// moved to components _menu-top.scss
 
-            &:hover{
-
-            }
-        }
-    }
 
 
 /* 3. Slider
@@ -215,17 +182,17 @@
  *
 */  
 
-.slider-outer,
-.section-slider{
+// .slider-outer,
+// .section-slider{
 
-    .slider{
-        width: 100%; 
-        height: 100vh;
-    }
-}
+//     .slider{
+//         width: 100%; 
+//         height: 100vh;
+//     }
+// }
 
 
-/* 3. Footer
+/* 4. Footer
  * **********************************************************************
  *
 */ 
@@ -247,61 +214,19 @@
 
 
 
-// When made sidebar like fullheight column
-.sidebar .menu-outer {
-// .menu-side-outer {
-// .menu-side {
-    position: sticky;
-    top: 0;
-}
+/* 5. menu-side
+ * **********************************************************************
+ *
+*/ 
 
-.menu-side { 
-    @include flex(flex-start, flex-start);
-    flex-direction: column;
-    // margin: 0  0.5em;
-    padding-left: 2em;
-    padding: 2em 0 2em 2em;
-}
-    .menu-side li {
-        
-        text-align: left;
-
-        &:last-child{
-            margin-right: 0;
-        }
-        a{
-            display: block;
-            margin: 0.25em  0;
-            @include font_size_pro('h6');
-            font-weight: 400;
-            line-height: $l_h;
-            color: $grey_super_light;
-
-            &:hover{
-                color: $secondary;
-            }
-        }
-
-        &.active {
-            & > a {
-                color: $secondary;
-                font-weight: 600;
-            }
-        }
-
-        .submenu {
-            padding-left: 2em;
-            li {
-                a {
-                    @include font_size_pro('base');
-                    font-weight: 300;
-                }
-            }
-        }
-    }
+// moved to components _menu-side.scss
 
 
 
+/* 6. demo-block
+ * **********************************************************************
+ *
+*/ 
 
 .demo-block {
     background-color: $grey_alt;

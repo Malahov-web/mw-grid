@@ -1,3 +1,8 @@
+2.4.2 / 2020-09-26
+==================
+ * Clean dev 'app/' dir
+ * Update Readme.md: add Demo screenshot and Table of contents
+
 2.4.1 / 2020-08-15
 ==================
  * Update devices: add columns gap support

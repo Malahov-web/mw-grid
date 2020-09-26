@@ -1,0 +1,57 @@
+/* . menu-side
+ * **********************************************************************
+ *
+*/  
+
+// When made sidebar like fullheight column
+.sidebar .menu-outer {
+// .menu-side-outer {
+// .menu-side {
+    position: sticky;
+    top: 0;
+}
+
+.menu-side { 
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    // margin: 0  0.5em;
+    padding-left: 2em;
+    padding: 2em 0 2em 2em;
+}
+    .menu-side li {
+        
+        text-align: left;
+
+        &:last-child{
+            margin-right: 0;
+        }
+        a{
+            display: block;
+            margin: 0.25em  0;
+            @include font_size_pro('h6');
+            font-weight: 400;
+            line-height: $l_h;
+            color: $grey_super_light;
+
+            &:hover{
+                color: $secondary;
+            }
+        }
+
+        &.active {
+            & > a {
+                color: $secondary;
+                font-weight: 600;
+            }
+        }
+
+        .submenu {
+            padding-left: 2em;
+            li {
+                a {
+                    @include font_size_pro('base');
+                    font-weight: 300;
+                }
+            }
+        }
+    }
