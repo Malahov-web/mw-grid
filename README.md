@@ -2,16 +2,16 @@
 Powerfull and lightweight CSS layout framework for creating your layout like 'container/row/column' support block, inline-block and flexbox models.
 
 `New in current version!` 
-> Update devices: add columns gap support (see demo Overview) 
+> Update Features: add columns self centered (see demo Features - Horizontal alignment) 
 
 `Attention!` 
-> Since version 1.3.0 i added new default breakpoints. Now breakpoints such as in the example below  
 > Versions 1.3.0-1.3.3 are deprecated now  
-> Sorry, if it broke your layout.  
-> 2 ways to fix it:
-* Override breakpoints in options in your SCSS-file ("mh_", "tb_", "ds_", and "hd_")
-* install v 1.2.1  ( `npm i mw-grid@1.2.1` )
 
+## Table of Contents
+- [Example](#example)
+- [Installation](#installation)
+- [Demo](#demo)
+- [Usage](#usage)
 
 ## Example
 -----------------------------------
@@ -83,7 +83,7 @@ $ npm install mw-grid --save-dev
 -----------------------------------
 See demo (small descriptions, exapmles and code) in this 'demo' directory:
 `node_modules/mw-grid/demo/index.html`
-
+![alt text](http://malahov-web.com/demo/mw-grid/screenshots/mw-grid-demo.png "Demo homepage screenshot")​
 ## Usage
 -----------------------------------
 ### HTML code - CSS-classes

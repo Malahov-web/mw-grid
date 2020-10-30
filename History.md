@@ -1,3 +1,8 @@
+2.5.0 / 2020-10-30
+==================
+ * Update Features - self centered
+ * Update Demo: Features - Horizontal alignement, self centered
+
 2.4.2 / 2020-09-26
 ==================
  * Clean dev 'app/' dir

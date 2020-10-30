@@ -5,12 +5,15 @@
     <div class="ds_24">
         <h2>Horizontal alignment</h2>
         <p>You can control the horizontal alignment of columns using <a href="/columns.html#offsets">offsets</a>.
-        <br>To form the offset CSS-class to the device name add the key word "offset" and size - the number of columns, like <code class="css-class">".ds_offset_2"</code>. </p>
+        <br>To form the offset CSS-class to the device name add the key word "offset" and size - the number of columns, like <code class="css-class">".ds_offset_2"</code>. 
+        <br>And to center column itself to the device name add the key word "self_centered", like <code class="css-class">".hd_self_centered"</code>
+        </p>
 
         <ul>
             <li>Use columns offsets</li>
             <li>Horizontal alignment is responsive - work up from breakpoint</li>
-            <li>Supports by all display models</li>
+            <li>Offsets supports by all display models</li>
+            <li>Self centering supports by block and flex models</li>
         </ul>
 
 
@@ -67,7 +70,14 @@
             <div class="demo-block">offset_2
             </div>
         </div>
-    </div>            
+    </div>
+
+     <div class="row">
+        <div class="mv_10 hd_self_centered">
+            <div class="demo-block">self_centered
+            </div>
+        </div>
+    </div>          
 
 </div>
 
@@ -122,6 +132,13 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
+
+ &lt;div class="row"&gt;
+    &lt;div class="mv_10 hd_self_centered"&gt;
+        &lt;div class="demo-block"&gt;self_centered
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt; 
             </code>
         </pre>
     </div>
