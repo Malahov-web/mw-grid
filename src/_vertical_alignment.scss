@@ -1,0 +1,49 @@
+
+// Перебираем все брейкпоинты
+// Для flex и для inline-block
+// Для каждого создаем класс  каждого из значений вертикального выравнивания 
+// Обнуляем padding (назначается по имени ячейки, которое будет присутствовать в данных классах)
+
+
+@if $vertical_alignment_responsive == 1 { // 1 != true ???
+
+
+    @each $device_name, $device_obj in $devices {
+
+
+        @media (min-width : #{map-get($device_obj, breakpoint)}px) {
+
+            // for inline-block
+            @if map-get($display_models, inline-block) == 1 {
+
+                .row-line.#{$device_name}middle>div{ vertical-align : middle;  }
+                .row-line.#{$device_name}top>div{ vertical-align : top; }
+                .row-line.#{$device_name}bottom>div{ vertical-align : bottom; }
+                .row-line.#{$device_name}baseline>div{ vertical-align : baseline; }
+
+            }
+
+            // for flex
+            @if map-get($display_models, flex) == 1 {
+
+                [class*=row-flex].#{$device_name}middle{ align-items: center; }
+                [class*=row-flex].#{$device_name}top{ align-items: flex-start; }
+                [class*=row-flex].#{$device_name}bottom{ align-items: flex-end; }
+                [class*=row-flex].#{$device_name}baseline{ align-items: baseline; }
+                [class*=row-flex].#{$device_name}stretch{ align-items: stretch; }
+
+            }
+
+        }
+
+        // reset paddings (paddings are assigned to the column name class)
+        .row-line[class*="#{$device_name}"],    
+        .row-flex[class*="#{$device_name}"],
+        .row-flexbox[class*="#{$device_name}"] {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+    }
+
+}

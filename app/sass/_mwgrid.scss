@@ -5,7 +5,7 @@ $columns_gap: 15;
 $container_width: 1200;
 $breakpoints_between: 'responsive'; // 'responsive' || 'fixed' 
 // $breakpoints_between: 'fixed'; // 'responsive' || 'fixed' 
- 
+$vertical_alignment_responsive: 1; // 0 || 1 
 
 $display_models: ( 
     block: 1,

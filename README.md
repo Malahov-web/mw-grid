@@ -2,7 +2,7 @@
 Powerfull and lightweight CSS layout framework for creating your layout like 'container/row/column' support block, inline-block and flexbox models.
 
 `New in current version!` 
-> Update Features: add columns self centered (see demo Features - Horizontal alignment) 
+> Update Features: add vertical alignment responsive settings (see demo Overview - SCSS API) 
 
 `Attention!` 
 > Versions 1.3.0-1.3.3 are deprecated now  
@@ -20,9 +20,10 @@ Your scss:
 
 // Options:
 $columns: 12;
-$columns_gap: 15;
-$container_width: 1400;
+$columns_gap: 15; // unitless
+$container_width: 1400; // unitless
 $breakpoints_between: 'responsive'; // 'responsive' || 'fixed'
+$vertical_alignment_responsive: 1;  // 0 || 1 
 
 $modules_display: ( 
     block: 1,
@@ -100,7 +101,7 @@ Your html:
                 <div class="news__item row-flex middle">
                     <div class="news__item-header mv_12 ds_5">
                         <div class="news__item-year">
-                            2019
+                            2020
                         </div>
                         <div class="news__item-title">
                             Getting ready to meet Christmas!
@@ -108,7 +109,7 @@ Your html:
                     </div>
                     <div class="news__item-content mv_12 ds_7">
                         <div class="news__item-text centered tb_lefted">
-                            Getting ready to meet Christmas is an EP by Las Vegas rock group , released in March 2019 in the United States.
+                            Getting ready to meet Christmas is an EP by Las Vegas rock group , released in December 2020 in the United States.
                         </div>
                     </div>
                 </div>

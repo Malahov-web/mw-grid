@@ -1,3 +1,9 @@
+2.6.0 / 2020-12-26
+==================
+ * Update Features - make vertical alignment in rows responsive by devices
+ * Settings - add vertical alignment responsive
+ * Fix Demo: Overview - SCSS API - type (int corrected to number)
+
 2.5.0 / 2020-10-30
 ==================
  * Update Features - self centered

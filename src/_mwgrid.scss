@@ -34,6 +34,7 @@ $columns: 12 !default;  // columns number
 $columns_gap: 15 !default;  // column one side gap
 $container_width: 1400 !default;  // container max width
 $breakpoints_between: 'responsive' !default; // 'responsive' || 'fixed'. When 'responsive' - 'container_max' don't use.
+$vertical_alignment_responsive: 0 !default; // [0||1] vertical alignment classes for each device
 
 $display_models: () !default; // types of CSS display modules
 $display_models: map-merge(
@@ -211,7 +212,10 @@ Modules have:
 
     .row-flex.row-reverse,
     .row-flex.reverse { flex-direction: row-reverse; }
+
 }
+
+@import '_vertical_alignment'; //
 
 
 
