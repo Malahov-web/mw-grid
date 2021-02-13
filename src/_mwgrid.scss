@@ -14,7 +14,7 @@
 
 // TODO
 /*
-Add $columns gap in devices for each device,
++ Add $columns gap in devices for each device,
 in all slectors where using $columns_gap use column gap from devices
 in default $devices add global $columns_gap
 */
@@ -234,12 +234,33 @@ Modules have:
     min-height: 1px;
 }
 
+// container responsive by devices
+// v.2
+// @each $device_name, $device_obj in $devices {
+
+//     $device_name_cutted: str-slice($device_name, 1, -2);
+
+//     .container-#{$device_name_cutted} {
+//         max-width: get_grid_c_m($device_name)+px;
+//     }
+// }
+
+
+
 @each $device_name, $device_obj in $devices {
 
     // columns width and offsets
     @media (min-width : #{map-get($device_obj, breakpoint)}px) {
 
-        // columns gap
+        // container responsive by devices
+        // v.1
+        .container-#{$device_name} {
+            max-width: map-get($device_obj, container_max)+px;
+        }
+        // @debug string.slice("Helvetica Neue", 1, -6); // "Helvetica" // см.
+        // str-slice($string, $start-at, $end-at: -1) //=> string 
+
+        // Updt.: move to -> _columns_gap.scss // columns gap 
         .container{
             // padding-left: get_grid_property($device_name, columns_gap );
             // 

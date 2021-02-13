@@ -1,3 +1,7 @@
+2.7.0 / 2021-02-12
+==================
+ * Update Structure elements - add containers responsive by devices (max-width)
+
 2.6.0 / 2020-12-26
 ==================
  * Update Features - make vertical alignment in rows responsive by devices
