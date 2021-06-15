@@ -1,10 +1,10 @@
 # mw-grid
 Powerfull and lightweight CSS layout framework for creating your layout like 'container/row/column' support block, inline-block and flexbox models.
 
-`New in current version!` 
-> Update Features: add vertical alignment responsive settings (see demo Overview - SCSS API) 
+`New in current version 2.7.1` 
+> Update Structure elements - add containers responsive by devices (max-width)
 
-`Attention!` 
+`Depricated versions:` 
 > Versions 1.3.0-1.3.3 are deprecated now  
 
 ## Table of Contents
@@ -82,7 +82,11 @@ $ npm install mw-grid --save-dev
 
 ## Demo
 -----------------------------------
-See demo (small descriptions, exapmles and code) in this 'demo' directory:
+
+See demo (small descriptions, exapmles and code) 
+https://malahov-web.github.io/mw-grid/
+
+and in this 'demo' directory:
 `node_modules/mw-grid/demo/index.html`
 ![alt text](http://malahov-web.com/demo/mw-grid/screenshots/mw-grid-demo.png "Demo homepage screenshot")​
 ## Usage
