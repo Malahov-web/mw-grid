@@ -1,6 +1,13 @@
+2.7.1 / 2021-06-14
+==================
+ * Add gh-pages Docs
+ * Update Demo: Structure elements - add containers responsive by devices (max-width)
+
 2.7.0 / 2021-02-12
 ==================
  * Update Structure elements - add containers responsive by devices (max-width)
+
+
 
 2.6.0 / 2020-12-26
 ==================
