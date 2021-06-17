@@ -42,7 +42,7 @@
     "stylelint": "^9.10.1",
     "stylelint-config-recommended": "^2.1.0",
     "bourbon": "^7.0.0",
-    "highlight.js": "^9.18.1",
+    "highlight.js": "^10.4.1",
     "jquery": "^3.4.1"
   },
   "scripts": {
