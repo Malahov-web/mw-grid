@@ -458,3 +458,8 @@ h6 {
     };  
 
 }
+
+.test_devices_by_fonts {
+    @include font_size_pro('base');
+    // 15  14  15  16
+}

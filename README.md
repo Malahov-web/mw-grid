@@ -1,11 +1,11 @@
 # mw-grid
 Powerfull and lightweight CSS layout framework for creating your layout like 'container/row/column' support block, inline-block and flexbox models.
 
-`New in current version 2.7.1` 
-> Update Structure elements - add containers responsive by devices (max-width)
+`New in current version 2.7.2` 
+> Add demo on gh-pages https://malahov-web.github.io/mw-grid/
 
-`Depricated versions:` 
-> Versions 1.3.0-1.3.3 are deprecated now  
+`Previous features update in 2.7.1` 
+> Update Structure elements - add containers responsive by devices (max-width)
 
 ## Table of Contents
 - [Example](#example)
@@ -25,11 +25,11 @@ $container_width: 1400; // unitless
 $breakpoints_between: 'responsive'; // 'responsive' || 'fixed'
 $vertical_alignment_responsive: 1;  // 0 || 1 
 
-$modules_display: ( 
+$display_models: ( 
     block: 1,
     inline-block: 0,
     flex: 1
-);
+); 
 
 $devices: ( 
     mv_: (

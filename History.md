@@ -1,3 +1,9 @@
+2.7.2 / 2021-07-09
+==================
+ * Update Demo: Overview - SCSS API - Vars, Objects
+ * Update Demo: Features - Vertical Alignment
+ * Fix Demo: Overview - SCSS API - Example ($display_models correct name) 
+
 2.7.1 / 2021-06-14
 ==================
  * Add gh-pages Docs
